@@ -1,0 +1,31 @@
+title                   = Optimized Steepest Descent Energy Minimization (Vacuum)
+
+; Run parameters
+integrator              = steep             ; Algorithm for steepest descent
+emtol                   = 500.0             ; Convergence threshold for max force (kJ/mol/nm)
+emstep                  = 0.01              ; Minimization step size (nm)
+nsteps                  = 100000            ; Maximum steps for minimization
+nstenergy               = 500               ; Output energy every 500 steps
+
+; Neighbor searching
+cutoff-scheme           = Verlet            ; Verlet cutoff scheme for neighbor lists
+nstlist                 = 20                ; Update neighbor list every 20 steps
+rlist                   = 1.2               ; Neighbor list cutoff distance (nm)
+
+; Electrostatics
+coulombtype             = Cutoff            ; Simple Coulomb cutoff for vacuum
+rcoulomb                = 1.2               ; Electrostatic cutoff distance (nm)
+
+; van der Waals
+rvdw                    = 1.2               ; Van der Waals cutoff distance (nm)
+vdwtype                 = Cutoff            ; Truncate Van der Waals interactions
+vdw-modifier            = none              ; No smoothing near cutoff
+
+; Dispersion correction
+DispCorr                = no                ; No dispersion correction in vacuum
+
+; Periodic Boundary Conditions
+pbc                     = xyz               ; No periodic boundary conditions in vacuum
+
+; Output control
+energygrps              = System            ; Output total energy for the system

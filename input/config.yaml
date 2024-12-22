@@ -1,0 +1,5 @@
+input: "input/1l2y.pdb"
+temp_min: 300
+temp_max: 400
+exchange_frequency: 1000
+simulation_time: 5000000

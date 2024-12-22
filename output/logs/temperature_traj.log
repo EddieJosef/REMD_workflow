@@ -1,0 +1,331 @@
+=== Extracting Temperature Trajectories for All Replicas ===
+Sun Dec 22 08:07:06 UTC 2024: Processing replica_001
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_001/remd.edr -o output/temperature_xvg/replica_001_temperature.xvg
+
+Opened replicas/replica_001/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "We're having an information explosion, among others, and it's certainly obvious that information is of no use unless it's available." (Sister Mary Kenneth Keller)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Temperature                 300.059      0.025    3.89158 -0.0830493  (K)
+Sun Dec 22 08:07:07 UTC 2024: Temperature trajectory saved for replica_001
+Sun Dec 22 08:07:07 UTC 2024: Processing replica_002
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_002/remd.edr -o output/temperature_xvg/replica_002_temperature.xvg
+
+Opened replicas/replica_002/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "We're having an information explosion, among others, and it's certainly obvious that information is of no use unless it's available." (Sister Mary Kenneth Keller)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Temperature                 312.656      0.012    4.05143 -0.00622912  (K)
+Sun Dec 22 08:07:07 UTC 2024: Temperature trajectory saved for replica_002
+Sun Dec 22 08:07:07 UTC 2024: Processing replica_003
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_003/remd.edr -o output/temperature_xvg/replica_003_temperature.xvg
+
+Opened replicas/replica_003/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "Stay Cool, This is a Robbery" (Pulp Fiction)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Temperature                 325.806      0.023    4.25222  -0.130133  (K)
+Sun Dec 22 08:07:08 UTC 2024: Temperature trajectory saved for replica_003
+Sun Dec 22 08:07:08 UTC 2024: Processing replica_004
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_004/remd.edr -o output/temperature_xvg/replica_004_temperature.xvg
+
+Opened replicas/replica_004/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "Stay Cool, This is a Robbery" (Pulp Fiction)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Temperature                 339.486       0.02    4.44615  0.0322814  (K)
+Sun Dec 22 08:07:09 UTC 2024: Temperature trajectory saved for replica_004
+Sun Dec 22 08:07:09 UTC 2024: Processing replica_005
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_005/remd.edr -o output/temperature_xvg/replica_005_temperature.xvg
+
+Opened replicas/replica_005/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "FORTRAN. Input: reason, output: pleasure" (ORDA, FORTRAN board game)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Temperature                 353.693      0.021    4.66824 -0.000508684  (K)
+Sun Dec 22 08:07:09 UTC 2024: Temperature trajectory saved for replica_005
+Sun Dec 22 08:07:09 UTC 2024: Processing replica_006
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_006/remd.edr -o output/temperature_xvg/replica_006_temperature.xvg
+
+Opened replicas/replica_006/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "RTFM" (B. Hess)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Temperature                  368.53      0.025    4.90128  0.0510136  (K)
+Sun Dec 22 08:07:10 UTC 2024: Temperature trajectory saved for replica_006
+Sun Dec 22 08:07:10 UTC 2024: Processing replica_007
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_007/remd.edr -o output/temperature_xvg/replica_007_temperature.xvg
+
+Opened replicas/replica_007/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "RTFM" (B. Hess)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Temperature                 383.999      0.025    5.16999   0.182025  (K)
+Sun Dec 22 08:07:10 UTC 2024: Temperature trajectory saved for replica_007
+Sun Dec 22 08:07:10 UTC 2024: Processing replica_008
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_008/remd.edr -o output/temperature_xvg/replica_008_temperature.xvg
+
+Opened replicas/replica_008/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "If You Want Something Done You Have to Do It Yourself" (Highlander II)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Temperature                  400.14      0.036    5.47123  0.0725306  (K)
+Sun Dec 22 08:07:11 UTC 2024: Temperature trajectory saved for replica_008
+=== Temperature Trajectories Extracted Successfully ===
+All replicas processed successfully.

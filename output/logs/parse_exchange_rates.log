@@ -1,0 +1,9 @@
+Parsing line: replicas/replica_001/remd.log-Repl      .00  .01  .01  .01  .02  .04  .05
+Parsing line: replicas/replica_002/remd.log-Repl      .00  .01  .01  .01  .02  .04  .05
+Parsing line: replicas/replica_003/remd.log-Repl      .00  .01  .01  .01  .02  .04  .05
+Parsing line: replicas/replica_004/remd.log-Repl      .00  .01  .01  .01  .02  .04  .05
+Parsing line: replicas/replica_005/remd.log-Repl      .00  .01  .01  .01  .02  .04  .05
+Parsing line: replicas/replica_006/remd.log-Repl      .00  .01  .01  .01  .02  .04  .05
+Parsing line: replicas/replica_007/remd.log-Repl      .00  .01  .01  .01  .02  .04  .05
+Parsing line: replicas/replica_008/remd.log-Repl      .00  .01  .01  .01  .02  .04  .05
+Plot saved as 'output/plots/exchange_acceptance_rate_percent.png'

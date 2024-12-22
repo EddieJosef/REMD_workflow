@@ -1,0 +1,33 @@
+title                   = Optimized Steepest Descent Energy Minimization
+
+; Run parameters
+integrator              = steep             ; Algorithm for steepest descent
+emtol                   = 500.0             ; Convergence threshold for max force (kJ/mol/nm)
+emstep                  = 0.01              ; Minimization step size (nm)
+nsteps                  = 50000             ; Maximum steps for minimization
+nstenergy               = 500               ; Output energy every 500 steps
+
+; Neighbor searching
+cutoff-scheme           = Verlet            ; Verlet cutoff scheme for neighbor lists
+nstlist                 = 20                ; Update neighbor list every 20 steps (GPU optimized)
+rlist                   = 1.2               ; Neighbor list cutoff distance (nm)
+
+; Electrostatics
+coulombtype             = PME               ; Particle Mesh Ewald for electrostatics
+rcoulomb                = 1.2               ; Electrostatic cutoff distance (nm)
+pme_order               = 4                 ; Interpolation order for PME
+fourierspacing          = 0.12              ; Grid spacing for PME FFT
+
+; van der Waals
+rvdw                    = 1.2               ; Van der Waals cutoff distance (nm)
+vdwtype                 = cutoff            ; Truncate Van der Waals interactions
+vdw-modifier            = Potential-shift-Verlet ; Smooth potential near cutoff
+
+; Dispersion correction
+DispCorr                = EnerPres          ; Apply dispersion correction for energy/pressure
+
+; Periodic Boundary Conditions
+pbc                     = xyz               ; Use 3D periodic boundary conditions
+
+; Output control
+energygrps              = System            ; Output total energy for the system
