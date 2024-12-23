@@ -47,13 +47,22 @@ for REPLICA in ${REPLICAS_DIR}/replica_*; do
         echo "Warning: Missing required files in $REPLICA. Skipping..."
         continue
     fi
-
+    
     # Output files for potential energy, Rg, and RMSD
-    for METRIC in pe rg rmsd; do
-        for i in {0..3}; do
-            declare "${METRIC}_${i}=${OUTPUT_DIR}/${REPLICA_ID}_${METRIC}_${i}.xvg"
-        done
-    done
+    PE_0="${OUTPUT_DIR}/${REPLICA_ID}_pe_0.xvg"
+    PE_1="${OUTPUT_DIR}/${REPLICA_ID}_pe_1.xvg"
+    PE_2="${OUTPUT_DIR}/${REPLICA_ID}_pe_2.xvg"
+    PE_3="${OUTPUT_DIR}/${REPLICA_ID}_pe_3.xvg"
+
+    RG_0="${OUTPUT_DIR}/${REPLICA_ID}_rg_0.xvg"
+    RG_1="${OUTPUT_DIR}/${REPLICA_ID}_rg_1.xvg"
+    RG_2="${OUTPUT_DIR}/${REPLICA_ID}_rg_2.xvg"
+    RG_3="${OUTPUT_DIR}/${REPLICA_ID}_rg_3.xvg"
+
+    RMSD_0="${OUTPUT_DIR}/${REPLICA_ID}_rmsd_0.xvg"
+    RMSD_1="${OUTPUT_DIR}/${REPLICA_ID}_rmsd_1.xvg"
+    RMSD_2="${OUTPUT_DIR}/${REPLICA_ID}_rmsd_2.xvg"
+    RMSD_3="${OUTPUT_DIR}/${REPLICA_ID}_rmsd_3.xvg"
 
     # Calculate time ranges
     TIME_1=$(echo "$TIME_INTERVAL" | bc)
