@@ -12,22 +12,31 @@ if [[ ! -f "$REF_STRUCTURE" ]]; then
     exit 1
 fi
 
-# Extract dt and nsteps from md.mdp in the root directory
+# Input: Simulation time in steps
+SIMULATION_STEPS=$1
+
+# Validate input
+if [[ -z "$SIMULATION_STEPS" ]]; then
+    echo "Error: Simulation time in steps not provided."
+    echo "Usage: bash calculate_convergence.sh {simulation_steps}"
+    exit 1
+fi
+
+# Extract dt from md.mdp
 MDP_FILE="md.mdp"
 
 if [[ -f "$MDP_FILE" ]]; then
     DT=$(grep -E "dt\\s*=" $MDP_FILE | awk '{print $3}')
-    NSTEPS=$(grep -E "nsteps\\s*=" $MDP_FILE | awk '{print $3}')
-    if [[ -n "$DT" && -n "$NSTEPS" ]]; then
-        LAST_TIME=$(echo "$DT * $NSTEPS" | bc)   # Calculate total simulation time
-        TIME_INTERVAL=$(echo "$LAST_TIME / 4" | bc) # Divide time into 4 intervals
+    if [[ -n "$DT" ]]; then
+        LAST_TIME=$(echo "$DT * $SIMULATION_STEPS" | bc)   # Calculate total simulation time in picoseconds
+        TIME_INTERVAL=$(echo "$LAST_TIME / 4" | bc)        # Divide total time into 4 intervals
         echo "Detected from $MDP_FILE:"
-        echo "  Time Step (dt): $DT"
-        echo "  Number of Steps (nsteps): $NSTEPS"
+        echo "  Time Step (dt): $DT ps"
+        echo "  Simulation Steps: $SIMULATION_STEPS"
         echo "  Total Simulation Time: $LAST_TIME ps"
         echo "  Time Interval for Analysis: $TIME_INTERVAL ps"
     else
-        echo "Error: Could not extract dt or nsteps from $MDP_FILE. Exiting."
+        echo "Error: Could not extract dt from $MDP_FILE. Exiting."
         exit 1
     fi
 else
