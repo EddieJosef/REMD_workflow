@@ -1,1 +1,113 @@
 ===== Convergence Metrics for All Replicas =====
+
+Replica 001:
+    Potential Energy (kJ/mol): -81256.416 ± 349.470
+    Radius of Gyration (nm): 0.717 ± 0.008
+    RMSD (nm): 0.159 ± 0.022
+    Potential Energy (kJ/mol): -81257.027 ± 291.913
+    Radius of Gyration (nm): 0.707 ± 0.008
+    RMSD (nm): 0.198 ± 0.027
+    Potential Energy (kJ/mol): -81204.916 ± 309.518
+    Radius of Gyration (nm): 0.704 ± 0.006
+    RMSD (nm): 0.182 ± 0.013
+    Potential Energy (kJ/mol): -81242.210 ± 314.522
+    Radius of Gyration (nm): 0.703 ± 0.007
+    RMSD (nm): 0.181 ± 0.011
+
+Replica 002:
+    Potential Energy (kJ/mol): -79866.037 ± 363.887
+    Radius of Gyration (nm): 0.727 ± 0.012
+    RMSD (nm): 0.189 ± 0.033
+    Potential Energy (kJ/mol): -79868.593 ± 344.923
+    Radius of Gyration (nm): 0.713 ± 0.011
+    RMSD (nm): 0.189 ± 0.022
+    Potential Energy (kJ/mol): -79916.343 ± 365.638
+    Radius of Gyration (nm): 0.704 ± 0.007
+    RMSD (nm): 0.182 ± 0.017
+    Potential Energy (kJ/mol): -79899.148 ± 350.761
+    Radius of Gyration (nm): 0.704 ± 0.007
+    RMSD (nm): 0.178 ± 0.014
+
+Replica 003:
+    Potential Energy (kJ/mol): -78532.277 ± 396.953
+    Radius of Gyration (nm): 0.726 ± 0.016
+    RMSD (nm): 0.200 ± 0.043
+    Potential Energy (kJ/mol): -78542.591 ± 379.658
+    Radius of Gyration (nm): 0.721 ± 0.011
+    RMSD (nm): 0.234 ± 0.074
+    Potential Energy (kJ/mol): -78503.571 ± 361.907
+    Radius of Gyration (nm): 0.712 ± 0.010
+    RMSD (nm): 0.199 ± 0.020
+    Potential Energy (kJ/mol): -78532.865 ± 377.234
+    Radius of Gyration (nm): 0.704 ± 0.006
+    RMSD (nm): 0.188 ± 0.015
+
+Replica 004:
+    Potential Energy (kJ/mol): -77038.467 ± 501.637
+    Radius of Gyration (nm): 0.735 ± 0.019
+    RMSD (nm): 0.224 ± 0.042
+    Potential Energy (kJ/mol): -77074.423 ± 453.289
+    Radius of Gyration (nm): 0.715 ± 0.018
+    RMSD (nm): 0.246 ± 0.069
+    Potential Energy (kJ/mol): -77052.514 ± 461.300
+    Radius of Gyration (nm): 0.714 ± 0.012
+    RMSD (nm): 0.217 ± 0.042
+    Potential Energy (kJ/mol): -77039.117 ± 425.104
+    Radius of Gyration (nm): 0.707 ± 0.010
+    RMSD (nm): 0.194 ± 0.021
+
+Replica 005:
+    Potential Energy (kJ/mol): -75582.576 ± 563.583
+    Radius of Gyration (nm): 0.719 ± 0.015
+    RMSD (nm): 0.198 ± 0.033
+    Potential Energy (kJ/mol): -75609.846 ± 472.687
+    Radius of Gyration (nm): 0.713 ± 0.014
+    RMSD (nm): 0.228 ± 0.045
+    Potential Energy (kJ/mol): -75616.700 ± 503.392
+    Radius of Gyration (nm): 0.718 ± 0.015
+    RMSD (nm): 0.222 ± 0.045
+    Potential Energy (kJ/mol): -75565.039 ± 426.913
+    Radius of Gyration (nm): 0.717 ± 0.017
+    RMSD (nm): 0.255 ± 0.066
+
+Replica 006:
+    Potential Energy (kJ/mol): -74057.016 ± 690.071
+    Radius of Gyration (nm): 0.723 ± 0.016
+    RMSD (nm): 0.199 ± 0.035
+    Potential Energy (kJ/mol): -74002.040 ± 556.063
+    Radius of Gyration (nm): 0.726 ± 0.016
+    RMSD (nm): 0.226 ± 0.050
+    Potential Energy (kJ/mol): -73970.176 ± 524.719
+    Radius of Gyration (nm): 0.722 ± 0.016
+    RMSD (nm): 0.228 ± 0.049
+    Potential Energy (kJ/mol): -73926.672 ± 583.099
+    Radius of Gyration (nm): 0.723 ± 0.015
+    RMSD (nm): 0.290 ± 0.092
+
+Replica 007:
+    Potential Energy (kJ/mol): -72354.129 ± 819.622
+    Radius of Gyration (nm): 0.724 ± 0.018
+    RMSD (nm): 0.222 ± 0.043
+    Potential Energy (kJ/mol): -72386.484 ± 644.364
+    Radius of Gyration (nm): 0.719 ± 0.015
+    RMSD (nm): 0.214 ± 0.045
+    Potential Energy (kJ/mol): -72422.941 ± 661.069
+    Radius of Gyration (nm): 0.722 ± 0.017
+    RMSD (nm): 0.222 ± 0.052
+    Potential Energy (kJ/mol): -72386.469 ± 591.570
+    Radius of Gyration (nm): 0.720 ± 0.017
+    RMSD (nm): 0.266 ± 0.077
+
+Replica 008:
+    Potential Energy (kJ/mol): -70668.659 ± 988.663
+    Radius of Gyration (nm): 0.729 ± 0.026
+    RMSD (nm): 0.227 ± 0.044
+    Potential Energy (kJ/mol): -70690.936 ± 774.725
+    Radius of Gyration (nm): 0.725 ± 0.015
+    RMSD (nm): 0.218 ± 0.041
+    Potential Energy (kJ/mol): -70644.439 ± 772.498
+    Radius of Gyration (nm): 0.728 ± 0.022
+    RMSD (nm): 0.252 ± 0.076
+    Potential Energy (kJ/mol): -70679.741 ± 753.366
+    Radius of Gyration (nm): 0.723 ± 0.018
+    RMSD (nm): 0.348 ± 0.069
