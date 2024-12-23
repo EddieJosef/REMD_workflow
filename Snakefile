@@ -92,7 +92,7 @@ rule analyze_output:
         python3 plot_energy_overlap.py 2>&1 | tee -a output/logs/plot_energy_overlap.log
 
         # Calculate convergence metrics
-        bash calculate_convergence.sh 2>&1 | tee -a output/logs/calculate_convergence.log
+        bash calculate_convergence.sh {simulation_time} 2>&1 | tee -a output/logs/calculate_convergence.log
 
         # Parse convergence metrics
         python3 parse_convergence_metrics.py 2>&1 | tee -a output/logs/parse_convergence_metrics.log
