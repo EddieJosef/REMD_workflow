@@ -95,7 +95,4 @@ for REPLICA in ${REPLICAS_DIR}/replica_*; do
     echo "Completed $REPLICA_ID"
 done
 
-# Run the Python script to analyze the results
-python3 parse_convergence_metrics.py || echo "Warning: Failed to parse convergence metrics."
-
 echo "=== All Replicas Processed. Results saved to $OUTPUT_DIR ==="
