@@ -1,6 +1,6 @@
 ; Run parameters
 integrator              = md
-nsteps                  = 100000          ; 100 ps for equilibration
+nsteps                  = 150000          ; 100 ps for equilibration
 dt                      = 0.001          ; 2 fs time step
 
 ; Output control
