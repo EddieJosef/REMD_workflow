@@ -1,0 +1,13 @@
+Parsing line: replicas/replica_001/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+Parsing line: replicas/replica_002/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+Parsing line: replicas/replica_003/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+Parsing line: replicas/replica_004/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+Parsing line: replicas/replica_005/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+Parsing line: replicas/replica_006/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+Parsing line: replicas/replica_007/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+Parsing line: replicas/replica_008/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+Parsing line: replicas/replica_009/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+Parsing line: replicas/replica_010/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+Parsing line: replicas/replica_011/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+Parsing line: replicas/replica_012/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+Plot saved as 'output/plots/exchange_acceptance_rate_percent.png'

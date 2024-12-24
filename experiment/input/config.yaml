@@ -1,0 +1,8 @@
+# Configuration for REMD Workflow
+input: "input/1l2y.pdb"               # Path to the input PDB file
+temp_min: 300                         # Minimum temperature for the temperature ladder (K)
+temp_max: 400                         # Maximum temperature for the temperature ladder (K)
+exchange_frequency: 2000              # Frequency of temperature exchanges
+simulation_time: 5000000              # Simulation time in picoseconds
+accept_ratio: 0.25                    # Target acceptance ratio for exchanges
+nreplicas: 12                         # Number of replicas (set to 0 for automatic calculation)

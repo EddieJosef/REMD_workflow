@@ -1,0 +1,1018 @@
+
+=== Step 1: Setting nsteps = 5000000 in Base MDP File ===
+
+=== Step 2: Generating MDP and TPR Files for Each Replica ===
+                      :-) GROMACS - gmx grompp, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi grompp -f replicas/replica_001/remd_001.mdp -c npt.gro -p topol.top -o replicas/replica_001/remd.tpr
+
+Ignoring obsolete mdp entry 'title'
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 11982.00
+
+GROMACS reminds you: "I'm a Wishbone and I'm Breaking" (Pixies)
+
+Setting the LD random seed to -1660485642
+
+Generated 2145 of the 2145 non-bonded parameter combinations
+
+Generated 2145 of the 2145 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.397 nm between atom 67 and 74
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+
+Calculated rlist for 1x1 atom pair-list as 1.295 nm, buffer size 0.095 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.223 nm, buffer size 0.023 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 40x40x40, spacing 0.110 0.110 0.110
+
+Estimate for the relative computational load of the PME mesh part: 0.26
+
+This run will generate roughly 33 Mb of data
+Replica 001: MDP and TPR files created at 300.00 K
+                      :-) GROMACS - gmx grompp, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi grompp -f replicas/replica_002/remd_002.mdp -c npt.gro -p topol.top -o replicas/replica_002/remd.tpr
+
+Ignoring obsolete mdp entry 'title'
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 11982.00
+
+GROMACS reminds you: "There's an old saying among scientific guys: “You can't make an omelet without breaking eggs, ideally by dropping a cement truck on them from a crane." (Dave Barry)
+
+Setting the LD random seed to -1610661891
+
+Generated 2145 of the 2145 non-bonded parameter combinations
+
+Generated 2145 of the 2145 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.397 nm between atom 67 and 74
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 307.95 K
+
+Calculated rlist for 1x1 atom pair-list as 1.297 nm, buffer size 0.097 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.224 nm, buffer size 0.024 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 40x40x40, spacing 0.110 0.110 0.110
+
+Estimate for the relative computational load of the PME mesh part: 0.26
+
+This run will generate roughly 33 Mb of data
+Replica 002: MDP and TPR files created at 307.95 K
+                      :-) GROMACS - gmx grompp, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi grompp -f replicas/replica_003/remd_003.mdp -c npt.gro -p topol.top -o replicas/replica_003/remd.tpr
+
+Ignoring obsolete mdp entry 'title'
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 11982.00
+
+GROMACS reminds you: "Ludwig Boltzmann, who spent much of his life studying statistical mechanics, died in 1906, by his own hand. Paul Ehrenfest, carrying on the same work, died similarly in 1933. Now it is our turn to study statistical mechanics. Perhaps it will be wise to approach the subject cautiously." (David Goodstein)
+
+Setting the LD random seed to 1541274615
+
+Generated 2145 of the 2145 non-bonded parameter combinations
+
+Generated 2145 of the 2145 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.397 nm between atom 67 and 74
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 316.11 K
+
+Calculated rlist for 1x1 atom pair-list as 1.299 nm, buffer size 0.099 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.225 nm, buffer size 0.025 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 40x40x40, spacing 0.110 0.110 0.110
+
+Estimate for the relative computational load of the PME mesh part: 0.26
+
+This run will generate roughly 33 Mb of data
+Replica 003: MDP and TPR files created at 316.11 K
+                      :-) GROMACS - gmx grompp, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi grompp -f replicas/replica_004/remd_004.mdp -c npt.gro -p topol.top -o replicas/replica_004/remd.tpr
+
+Ignoring obsolete mdp entry 'title'
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 11982.00
+
+GROMACS reminds you: "We think there is color, we think there is sweet, we think there is bitter, but in reality there are atoms and a void." (Democritus)
+
+Setting the LD random seed to 1795062716
+
+Generated 2145 of the 2145 non-bonded parameter combinations
+
+Generated 2145 of the 2145 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.397 nm between atom 67 and 74
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 324.49 K
+
+Calculated rlist for 1x1 atom pair-list as 1.300 nm, buffer size 0.100 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.227 nm, buffer size 0.027 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 40x40x40, spacing 0.110 0.110 0.110
+
+Estimate for the relative computational load of the PME mesh part: 0.26
+
+This run will generate roughly 33 Mb of data
+Replica 004: MDP and TPR files created at 324.49 K
+                      :-) GROMACS - gmx grompp, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi grompp -f replicas/replica_005/remd_005.mdp -c npt.gro -p topol.top -o replicas/replica_005/remd.tpr
+
+Ignoring obsolete mdp entry 'title'
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 11982.00
+
+GROMACS reminds you: "Ohne Arbeit waer das Leben oede" (Wir Sind Helden)
+
+Setting the LD random seed to -293880049
+
+Generated 2145 of the 2145 non-bonded parameter combinations
+
+Generated 2145 of the 2145 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.397 nm between atom 67 and 74
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 333.08 K
+
+Calculated rlist for 1x1 atom pair-list as 1.302 nm, buffer size 0.102 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.228 nm, buffer size 0.028 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 40x40x40, spacing 0.110 0.110 0.110
+
+Estimate for the relative computational load of the PME mesh part: 0.26
+
+This run will generate roughly 33 Mb of data
+Replica 005: MDP and TPR files created at 333.08 K
+                      :-) GROMACS - gmx grompp, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi grompp -f replicas/replica_006/remd_006.mdp -c npt.gro -p topol.top -o replicas/replica_006/remd.tpr
+
+Ignoring obsolete mdp entry 'title'
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 11982.00
+
+GROMACS reminds you: "Ohne Arbeit waer das Leben oede" (Wir Sind Helden)
+
+Setting the LD random seed to -550507522
+
+Generated 2145 of the 2145 non-bonded parameter combinations
+
+Generated 2145 of the 2145 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.397 nm between atom 67 and 74
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 341.91 K
+
+Calculated rlist for 1x1 atom pair-list as 1.304 nm, buffer size 0.104 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.229 nm, buffer size 0.029 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 40x40x40, spacing 0.110 0.110 0.110
+
+Estimate for the relative computational load of the PME mesh part: 0.26
+
+This run will generate roughly 33 Mb of data
+Replica 006: MDP and TPR files created at 341.91 K
+                      :-) GROMACS - gmx grompp, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi grompp -f replicas/replica_007/remd_007.mdp -c npt.gro -p topol.top -o replicas/replica_007/remd.tpr
+
+Ignoring obsolete mdp entry 'title'
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 11982.00
+
+GROMACS reminds you: "There is nothing new to be discovered in physics now. All that remains is more and more precise measurement." (Lord Kelvin, 1900)
+
+Setting the LD random seed to -401795
+
+Generated 2145 of the 2145 non-bonded parameter combinations
+
+Generated 2145 of the 2145 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.397 nm between atom 67 and 74
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 350.97 K
+
+Calculated rlist for 1x1 atom pair-list as 1.306 nm, buffer size 0.106 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.230 nm, buffer size 0.030 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 40x40x40, spacing 0.110 0.110 0.110
+
+Estimate for the relative computational load of the PME mesh part: 0.26
+
+This run will generate roughly 33 Mb of data
+Replica 007: MDP and TPR files created at 350.97 K
+                      :-) GROMACS - gmx grompp, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi grompp -f replicas/replica_008/remd_008.mdp -c npt.gro -p topol.top -o replicas/replica_008/remd.tpr
+
+Ignoring obsolete mdp entry 'title'
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 11982.00
+
+GROMACS reminds you: "Beware of bugs in the above code; I have only proved it correct, not tried it." (Donald Knuth)
+
+Setting the LD random seed to -638877777
+
+Generated 2145 of the 2145 non-bonded parameter combinations
+
+Generated 2145 of the 2145 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.397 nm between atom 67 and 74
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 360.27 K
+
+Calculated rlist for 1x1 atom pair-list as 1.308 nm, buffer size 0.108 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.232 nm, buffer size 0.032 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 40x40x40, spacing 0.110 0.110 0.110
+
+Estimate for the relative computational load of the PME mesh part: 0.26
+
+This run will generate roughly 33 Mb of data
+Replica 008: MDP and TPR files created at 360.27 K
+                      :-) GROMACS - gmx grompp, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi grompp -f replicas/replica_009/remd_009.mdp -c npt.gro -p topol.top -o replicas/replica_009/remd.tpr
+
+Ignoring obsolete mdp entry 'title'
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 11982.00
+
+GROMACS reminds you: "Your assumptions are your windows on the world. Scrub them off every once in a while, or the light won't come in." (Isaac Asimov)
+
+Setting the LD random seed to -1655702785
+
+Generated 2145 of the 2145 non-bonded parameter combinations
+
+Generated 2145 of the 2145 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.397 nm between atom 67 and 74
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 369.82 K
+
+Calculated rlist for 1x1 atom pair-list as 1.310 nm, buffer size 0.110 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.233 nm, buffer size 0.033 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 40x40x40, spacing 0.110 0.110 0.110
+
+Estimate for the relative computational load of the PME mesh part: 0.26
+
+This run will generate roughly 33 Mb of data
+Replica 009: MDP and TPR files created at 369.82 K
+                      :-) GROMACS - gmx grompp, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi grompp -f replicas/replica_010/remd_010.mdp -c npt.gro -p topol.top -o replicas/replica_010/remd.tpr
+
+Ignoring obsolete mdp entry 'title'
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 11982.00
+
+GROMACS reminds you: "I originally implemented PME to prove that you didn't need it..." (Erik Lindahl)
+
+Setting the LD random seed to -1909173
+
+Generated 2145 of the 2145 non-bonded parameter combinations
+
+Generated 2145 of the 2145 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.397 nm between atom 67 and 74
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 379.62 K
+
+Calculated rlist for 1x1 atom pair-list as 1.312 nm, buffer size 0.112 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.234 nm, buffer size 0.034 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 40x40x40, spacing 0.110 0.110 0.110
+
+Estimate for the relative computational load of the PME mesh part: 0.26
+
+This run will generate roughly 33 Mb of data
+Replica 010: MDP and TPR files created at 379.62 K
+                      :-) GROMACS - gmx grompp, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi grompp -f replicas/replica_011/remd_011.mdp -c npt.gro -p topol.top -o replicas/replica_011/remd.tpr
+
+Ignoring obsolete mdp entry 'title'
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 11982.00
+
+GROMACS reminds you: "Wicky-wicky Wa-wild West" (Will Smith)
+
+Setting the LD random seed to -826876553
+
+Generated 2145 of the 2145 non-bonded parameter combinations
+
+Generated 2145 of the 2145 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.397 nm between atom 67 and 74
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 389.67 K
+
+Calculated rlist for 1x1 atom pair-list as 1.315 nm, buffer size 0.115 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.236 nm, buffer size 0.036 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 40x40x40, spacing 0.110 0.110 0.110
+
+Estimate for the relative computational load of the PME mesh part: 0.26
+
+This run will generate roughly 33 Mb of data
+Replica 011: MDP and TPR files created at 389.67 K
+                      :-) GROMACS - gmx grompp, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi grompp -f replicas/replica_012/remd_012.mdp -c npt.gro -p topol.top -o replicas/replica_012/remd.tpr
+
+Ignoring obsolete mdp entry 'title'
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 11982.00
+
+GROMACS reminds you: "gmx fellowship-writing -g grant_name -s protein_structure_involved -o output -m method_used -p list_of_pi" (Tanadet Pipatpolkai, while discussing new features for GROMACS)
+
+Setting the LD random seed to -268582413
+
+Generated 2145 of the 2145 non-bonded parameter combinations
+
+Generated 2145 of the 2145 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.397 nm between atom 67 and 74
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 400 K
+
+Calculated rlist for 1x1 atom pair-list as 1.317 nm, buffer size 0.117 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.237 nm, buffer size 0.037 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 40x40x40, spacing 0.110 0.110 0.110
+
+Estimate for the relative computational load of the PME mesh part: 0.25
+
+This run will generate roughly 33 Mb of data
+Replica 012: MDP and TPR files created at 400.00 K
+
+=== Step 4: Running REMD Simulation with Replex = 2000 ===
+                      :-) GROMACS - gmx mdrun, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace/replicas
+Command line:
+  gmx_mpi mdrun -multidir ./replica_001 ./replica_002 ./replica_003 ./replica_004 ./replica_005 ./replica_006 ./replica_007 ./replica_008 ./replica_009 ./replica_010 ./replica_011 ./replica_012 -replex 2000 -deffnm remd
+
+Reading file remd.tpr, VERSION 2024.2 (single precision)
+Reading file remd.tpr, VERSION 2024.2 (single precision)
+Reading file remd.tpr, VERSION 2024.2 (single precision)
+Reading file remd.tpr, VERSION 2024.2 (single precision)
+Reading file remd.tpr, VERSION 2024.2 (single precision)
+Reading file remd.tpr, VERSION 2024.2 (single precision)
+Reading file remd.tpr, VERSION 2024.2 (single precision)
+Reading file remd.tpr, VERSION 2024.2 (single precision)
+Reading file remd.tpr, VERSION 2024.2 (single precision)
+Reading file remd.tpr, VERSION 2024.2 (single precision)
+Reading file remd.tpr, VERSION 2024.2 (single precision)
+Reading file remd.tpr, VERSION 2024.2 (single precision)
+Changing nstlist from 20 to 100, rlist from 1.223 to 1.345
+
+Changing nstlist from 20 to 100, rlist from 1.23 to 1.362
+
+Changing nstlist from 20 to 100, rlist from 1.224 to 1.348
+
+Changing nstlist from 20 to 100, rlist from 1.232 to 1.365
+
+Changing nstlist from 20 to 100, rlist from 1.234 to 1.372
+
+Changing nstlist from 20 to 100, rlist from 1.227 to 1.354
+
+Changing nstlist from 20 to 100, rlist from 1.228 to 1.356
+
+Changing nstlist from 20 to 100, rlist from 1.237 to 1.379
+
+Changing nstlist from 20 to 100, rlist from 1.229 to 1.359
+
+Changing nstlist from 20 to 100, rlist from 1.236 to 1.375
+
+Changing nstlist from 20 to 100, rlist from 1.225 to 1.351
+
+Changing nstlist from 20 to 100, rlist from 1.233 to 1.369
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 24 GPU tasks in the 12 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+1 GPU selected for this run.
+Mapping of GPU IDs to the 24 GPU tasks in the 12 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+1 GPU selected for this run.
+Mapping of GPU IDs to the 24 GPU tasks in the 12 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+1 GPU selected for this run.
+Mapping of GPU IDs to the 24 GPU tasks in the 12 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+1 GPU selected for this run.
+Mapping of GPU IDs to the 24 GPU tasks in the 12 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+1 GPU selected for this run.
+Mapping of GPU IDs to the 24 GPU tasks in the 12 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+1 GPU selected for this run.
+Mapping of GPU IDs to the 24 GPU tasks in the 12 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+1 GPU selected for this run.
+Mapping of GPU IDs to the 24 GPU tasks in the 12 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+1 GPU selected for this run.
+Mapping of GPU IDs to the 24 GPU tasks in the 12 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+1 GPU selected for this run.
+Mapping of GPU IDs to the 24 GPU tasks in the 12 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+1 GPU selected for this run.
+Mapping of GPU IDs to the 24 GPU tasks in the 12 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+1 GPU selected for this run.
+Mapping of GPU IDs to the 24 GPU tasks in the 12 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+
+This is simulation 6 out of 12 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 4 out of 12 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 1 out of 12 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 2 out of 12 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 10 out of 12 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 11 out of 12 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 5 out of 12 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 7 out of 12 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 3 out of 12 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 9 out of 12 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 0 out of 12 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread 
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread 
+
+
+Non-default thread affinity set, disabling internal thread affinity
+
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread 
+
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread 
+
+This is simulation 8 out of 12 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread 
+
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread 
+
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread 
+
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread 
+
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread 
+
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread 
+
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread 
+
+
+WARNING: On rank 0: oversubscribing the recommended max load of 8 logical CPUs per node with 12 MPI processes.
+         This will cause considerable performance loss.
+WARNING: On rank 0: oversubscribing the recommended max load of 8 logical CPUs per node with 12 MPI processes.
+         This will cause considerable performance loss.
+
+WARNING: On rank 0: oversubscribing the recommended max load of 8 logical CPUs per node with 12 MPI processes.
+         This will cause considerable performance loss.
+
+WARNING: On rank 0: oversubscribing the recommended max load of 8 logical CPUs per node with 12 MPI processes.
+         This will cause considerable performance loss.
+
+WARNING: On rank 0: oversubscribing the recommended max load of 8 logical CPUs per node with 12 MPI processes.
+         This will cause considerable performance loss.
+
+WARNING: On rank 0: oversubscribing the recommended max load of 8 logical CPUs per node with 12 MPI processes.
+         This will cause considerable performance loss.
+
+WARNING: On rank 0: oversubscribing the recommended max load of 8 logical CPUs per node with 12 MPI processes.
+         This will cause considerable performance loss.
+
+
+WARNING: On rank 0: oversubscribing the recommended max load of 8 logical CPUs per node with 12 MPI processes.
+         This will cause considerable performance loss.
+
+Using 1 OpenMP thread 
+
+
+WARNING: On rank 0: oversubscribing the recommended max load of 8 logical CPUs per node with 12 MPI processes.
+         This will cause considerable performance loss.
+
+WARNING: On rank 0: oversubscribing the recommended max load of 8 logical CPUs per node with 12 MPI processes.
+         This will cause considerable performance loss.
+
+
+WARNING: On rank 0: oversubscribing the recommended max load of 8 logical CPUs per node with 12 MPI processes.
+         This will cause considerable performance loss.
+
+WARNING: On rank 0: oversubscribing the recommended max load of 8 logical CPUs per node with 12 MPI processes.
+         This will cause considerable performance loss.
+starting mdrun 'TC5B in water'
+5000000 steps,  10000.0 ps.
+starting mdrun 'TC5B in water'
+5000000 steps,  10000.0 ps.
+starting mdrun 'TC5B in water'
+5000000 steps,  10000.0 ps.
+starting mdrun 'TC5B in water'
+5000000 steps,  10000.0 ps.
+starting mdrun 'TC5B in water'
+5000000 steps,  10000.0 ps.
+starting mdrun 'TC5B in water'
+5000000 steps,  10000.0 ps.
+starting mdrun 'TC5B in water'
+5000000 steps,  10000.0 ps.
+starting mdrun 'TC5B in water'
+5000000 steps,  10000.0 ps.
+starting mdrun 'TC5B in water'
+5000000 steps,  10000.0 ps.
+starting mdrun 'TC5B in water'
+5000000 steps,  10000.0 ps.
+starting mdrun 'TC5B in water'
+5000000 steps,  10000.0 ps.
+starting mdrun 'TC5B in water'
+5000000 steps,  10000.0 ps.
+
+Step 4602451 Pressure scaling more than 1%. This may mean your system is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during equilibration can lead to simulation instability, and is discouraged.
+
+Step 4603501 Pressure scaling more than 1%. This may mean your system is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during equilibration can lead to simulation instability, and is discouraged.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+GROMACS reminds you: "It's So Fast It's Slow" (F. Black)
+
+REMD simulation completed successfully!

@@ -1,0 +1,1948 @@
+
+=== Correcting PBC, Centering, and Extracting Structures for All Replicas ===
+
+--- Processing replica_001 ---
+Step 1: Creating index file...
+                     :-) GROMACS - gmx make_ndx, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi make_ndx -f em.gro -o replicas/replica_001/index.ndx
+
+
+Reading structure file
+
+GROMACS reminds you: "There's so many shades of black" (The Raconteurs)
+
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+  0 System              :  5910 atoms
+  1 Protein             :   304 atoms
+  2 Protein-H           :   154 atoms
+  3 C-alpha             :    20 atoms
+  4 Backbone            :    60 atoms
+  5 MainChain           :    81 atoms
+  6 MainChain+Cb        :    98 atoms
+  7 MainChain+H         :    99 atoms
+  8 SideChain           :   205 atoms
+  9 SideChain-H         :    73 atoms
+ 10 Prot-Masses         :   304 atoms
+ 11 non-Protein         :  5606 atoms
+ 12 Water               :  5595 atoms
+ 13 SOL                 :  5595 atoms
+ 14 non-Water           :   315 atoms
+ 15 Ion                 :    11 atoms
+ 16 Water_and_ions      :  5606 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 
+Copied index group 1 'Protein'
+Found 3880 atoms with name H*
+Complemented group: 2030 atoms
+Merged two groups with AND: 304 2030 -> 154
+
+> 
+
+> 
+Step 2: Centering and fixing PBC...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_001/remd.tpr -f replicas/replica_001/remd.xtc -o replicas/replica_001/final.xtc -center -pbc mol -ur compact -boxcenter tric
+
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file replicas/replica_001/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_001/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_001/remd.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Reading frame       1 time   10.000    ->  frame      0 time    0.000      Reading frame       2 time   20.000    ->  frame      1 time   10.000      Reading frame       3 time   30.000    ->  frame      2 time   20.000      Reading frame       4 time   40.000    ->  frame      3 time   30.000      Reading frame       5 time   50.000    ->  frame      4 time   40.000      Reading frame       6 time   60.000    ->  frame      5 time   50.000      Reading frame       7 time   70.000    ->  frame      6 time   60.000      Reading frame       8 time   80.000    ->  frame      7 time   70.000      Reading frame       9 time   90.000    ->  frame      8 time   80.000      Reading frame      10 time  100.000    ->  frame      9 time   90.000      Reading frame      11 time  110.000    ->  frame     10 time  100.000      Reading frame      12 time  120.000    ->  frame     11 time  110.000      Reading frame      13 time  130.000    ->  frame     12 time  120.000      Reading frame      14 time  140.000    ->  frame     13 time  130.000      Reading frame      15 time  150.000    ->  frame     14 time  140.000      Reading frame      16 time  160.000    ->  frame     15 time  150.000      Reading frame      17 time  170.000    ->  frame     16 time  160.000      Reading frame      18 time  180.000    ->  frame     17 time  170.000      Reading frame      19 time  190.000    ->  frame     18 time  180.000      Reading frame      20 time  200.000    ->  frame     19 time  190.000      Reading frame      30 time  300.000    ->  frame     29 time  290.000      Reading frame      40 time  400.000    ->  frame     39 time  390.000      Reading frame      50 time  500.000    ->  frame     49 time  490.000      Reading frame      60 time  600.000    ->  frame     59 time  590.000      Reading frame      70 time  700.000    ->  frame     69 time  690.000      Reading frame      80 time  800.000    ->  frame     79 time  790.000      Reading frame      90 time  900.000    ->  frame     89 time  890.000      Reading frame     100 time 1000.000    ->  frame     99 time  990.000      Reading frame     110 time 1100.000    ->  frame    109 time 1090.000      Reading frame     120 time 1200.000    ->  frame    119 time 1190.000      Reading frame     130 time 1300.000    ->  frame    129 time 1290.000      Reading frame     140 time 1400.000    ->  frame    139 time 1390.000      Reading frame     150 time 1500.000    ->  frame    149 time 1490.000      Reading frame     160 time 1600.000    ->  frame    159 time 1590.000      Reading frame     170 time 1700.000    ->  frame    169 time 1690.000      Reading frame     180 time 1800.000    ->  frame    179 time 1790.000      Reading frame     190 time 1900.000    ->  frame    189 time 1890.000      Reading frame     200 time 2000.000    ->  frame    199 time 1990.000      Reading frame     300 time 3000.000    ->  frame    299 time 2990.000      Reading frame     400 time 4000.000    ->  frame    399 time 3990.000      Reading frame     500 time 5000.000    ->  frame    499 time 4990.000      Reading frame     600 time 6000.000    ->  frame    599 time 5990.000      Reading frame     700 time 7000.000    ->  frame    699 time 6990.000      Reading frame     800 time 8000.000    ->  frame    799 time 7990.000      Reading frame     900 time 9000.000    ->  frame    899 time 8990.000      Reading frame    1000 time 10000.000    ->  frame    999 time 9990.000      Last frame       1000 time 10000.000   
+ ->  frame   1000 time 10000.000      
+Last written: frame   1000 time 10000.000
+
+
+GROMACS reminds you: "Right Now My Job is Eating These Doughnuts" (Bodycount)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for centering
+Selected 1: 'Protein'
+Select group for output
+Selected 0: 'System'
+Step 3: Extracting last frame...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_001/remd.tpr -f replicas/replica_001/final.xtc -o output/final_pdbs/replica_001_final_structure.pdb -dump 10000
+
+Will write pdb: Protein data bank file
+Reading file replicas/replica_001/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_001/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_001/final.xtc is 0.001 (nm)
+Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+Dumping frame at t= 10000 ps
+ ->  frame      0 time 10000.000      
+Last written: frame      0 time 10000.000
+
+
+GROMACS reminds you: "Just Because the Sun Wants a Place In the Sky" (F. Zappa)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output
+Selected 0: 'System'
+replica_001: Processed and last frame extracted.
+
+--- Processing replica_002 ---
+Step 1: Creating index file...
+                     :-) GROMACS - gmx make_ndx, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi make_ndx -f em.gro -o replicas/replica_002/index.ndx
+
+
+Reading structure file
+
+GROMACS reminds you: "I wanted to make a clever chemistry joke, but the best ones Argon." (39.948)
+
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+  0 System              :  5910 atoms
+  1 Protein             :   304 atoms
+  2 Protein-H           :   154 atoms
+  3 C-alpha             :    20 atoms
+  4 Backbone            :    60 atoms
+  5 MainChain           :    81 atoms
+  6 MainChain+Cb        :    98 atoms
+  7 MainChain+H         :    99 atoms
+  8 SideChain           :   205 atoms
+  9 SideChain-H         :    73 atoms
+ 10 Prot-Masses         :   304 atoms
+ 11 non-Protein         :  5606 atoms
+ 12 Water               :  5595 atoms
+ 13 SOL                 :  5595 atoms
+ 14 non-Water           :   315 atoms
+ 15 Ion                 :    11 atoms
+ 16 Water_and_ions      :  5606 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 
+Copied index group 1 'Protein'
+Found 3880 atoms with name H*
+Complemented group: 2030 atoms
+Merged two groups with AND: 304 2030 -> 154
+
+> 
+
+> 
+Step 2: Centering and fixing PBC...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_002/remd.tpr -f replicas/replica_002/remd.xtc -o replicas/replica_002/final.xtc -center -pbc mol -ur compact -boxcenter tric
+
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file replicas/replica_002/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_002/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_002/remd.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Reading frame       1 time   10.000    ->  frame      0 time    0.000      Reading frame       2 time   20.000    ->  frame      1 time   10.000      Reading frame       3 time   30.000    ->  frame      2 time   20.000      Reading frame       4 time   40.000    ->  frame      3 time   30.000      Reading frame       5 time   50.000    ->  frame      4 time   40.000      Reading frame       6 time   60.000    ->  frame      5 time   50.000      Reading frame       7 time   70.000    ->  frame      6 time   60.000      Reading frame       8 time   80.000    ->  frame      7 time   70.000      Reading frame       9 time   90.000    ->  frame      8 time   80.000      Reading frame      10 time  100.000    ->  frame      9 time   90.000      Reading frame      11 time  110.000    ->  frame     10 time  100.000      Reading frame      12 time  120.000    ->  frame     11 time  110.000      Reading frame      13 time  130.000    ->  frame     12 time  120.000      Reading frame      14 time  140.000    ->  frame     13 time  130.000      Reading frame      15 time  150.000    ->  frame     14 time  140.000      Reading frame      16 time  160.000    ->  frame     15 time  150.000      Reading frame      17 time  170.000    ->  frame     16 time  160.000      Reading frame      18 time  180.000    ->  frame     17 time  170.000      Reading frame      19 time  190.000    ->  frame     18 time  180.000      Reading frame      20 time  200.000    ->  frame     19 time  190.000      Reading frame      30 time  300.000    ->  frame     29 time  290.000      Reading frame      40 time  400.000    ->  frame     39 time  390.000      Reading frame      50 time  500.000    ->  frame     49 time  490.000      Reading frame      60 time  600.000    ->  frame     59 time  590.000      Reading frame      70 time  700.000    ->  frame     69 time  690.000      Reading frame      80 time  800.000    ->  frame     79 time  790.000      Reading frame      90 time  900.000    ->  frame     89 time  890.000      Reading frame     100 time 1000.000    ->  frame     99 time  990.000      Reading frame     110 time 1100.000    ->  frame    109 time 1090.000      Reading frame     120 time 1200.000    ->  frame    119 time 1190.000      Reading frame     130 time 1300.000    ->  frame    129 time 1290.000      Reading frame     140 time 1400.000    ->  frame    139 time 1390.000      Reading frame     150 time 1500.000    ->  frame    149 time 1490.000      Reading frame     160 time 1600.000    ->  frame    159 time 1590.000      Reading frame     170 time 1700.000    ->  frame    169 time 1690.000      Reading frame     180 time 1800.000    ->  frame    179 time 1790.000      Reading frame     190 time 1900.000    ->  frame    189 time 1890.000      Reading frame     200 time 2000.000    ->  frame    199 time 1990.000      Reading frame     300 time 3000.000    ->  frame    299 time 2990.000      Reading frame     400 time 4000.000    ->  frame    399 time 3990.000      Reading frame     500 time 5000.000    ->  frame    499 time 4990.000      Reading frame     600 time 6000.000    ->  frame    599 time 5990.000      Reading frame     700 time 7000.000    ->  frame    699 time 6990.000      Reading frame     800 time 8000.000    ->  frame    799 time 7990.000      Reading frame     900 time 9000.000    ->  frame    899 time 8990.000      Reading frame    1000 time 10000.000    ->  frame    999 time 9990.000      Last frame       1000 time 10000.000   
+ ->  frame   1000 time 10000.000      
+Last written: frame   1000 time 10000.000
+
+
+GROMACS reminds you: "Two guys can move very fast when they're motivated enough and unemployed" (Eric Betzig)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for centering
+Selected 1: 'Protein'
+Select group for output
+Selected 0: 'System'
+Step 3: Extracting last frame...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_002/remd.tpr -f replicas/replica_002/final.xtc -o output/final_pdbs/replica_002_final_structure.pdb -dump 10000
+
+Will write pdb: Protein data bank file
+Reading file replicas/replica_002/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_002/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_002/final.xtc is 0.001 (nm)
+Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+Dumping frame at t= 10000 ps
+ ->  frame      0 time 10000.000      
+Last written: frame      0 time 10000.000
+
+
+GROMACS reminds you: "Aber wenn der Quarterback kommt, um dir die Brille abzunehmen, sag ihm: Danke, die bleibt wo sie ist" (Wir sind Helden)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output
+Selected 0: 'System'
+replica_002: Processed and last frame extracted.
+
+--- Processing replica_003 ---
+Step 1: Creating index file...
+                     :-) GROMACS - gmx make_ndx, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi make_ndx -f em.gro -o replicas/replica_003/index.ndx
+
+
+Reading structure file
+
+GROMACS reminds you: "Aber wenn der Quarterback kommt, um dir die Brille abzunehmen, sag ihm: Danke, die bleibt wo sie ist" (Wir sind Helden)
+
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+  0 System              :  5910 atoms
+  1 Protein             :   304 atoms
+  2 Protein-H           :   154 atoms
+  3 C-alpha             :    20 atoms
+  4 Backbone            :    60 atoms
+  5 MainChain           :    81 atoms
+  6 MainChain+Cb        :    98 atoms
+  7 MainChain+H         :    99 atoms
+  8 SideChain           :   205 atoms
+  9 SideChain-H         :    73 atoms
+ 10 Prot-Masses         :   304 atoms
+ 11 non-Protein         :  5606 atoms
+ 12 Water               :  5595 atoms
+ 13 SOL                 :  5595 atoms
+ 14 non-Water           :   315 atoms
+ 15 Ion                 :    11 atoms
+ 16 Water_and_ions      :  5606 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 
+Copied index group 1 'Protein'
+Found 3880 atoms with name H*
+Complemented group: 2030 atoms
+Merged two groups with AND: 304 2030 -> 154
+
+> 
+
+> 
+Step 2: Centering and fixing PBC...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_003/remd.tpr -f replicas/replica_003/remd.xtc -o replicas/replica_003/final.xtc -center -pbc mol -ur compact -boxcenter tric
+
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file replicas/replica_003/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_003/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_003/remd.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Reading frame       1 time   10.000    ->  frame      0 time    0.000      Reading frame       2 time   20.000    ->  frame      1 time   10.000      Reading frame       3 time   30.000    ->  frame      2 time   20.000      Reading frame       4 time   40.000    ->  frame      3 time   30.000      Reading frame       5 time   50.000    ->  frame      4 time   40.000      Reading frame       6 time   60.000    ->  frame      5 time   50.000      Reading frame       7 time   70.000    ->  frame      6 time   60.000      Reading frame       8 time   80.000    ->  frame      7 time   70.000      Reading frame       9 time   90.000    ->  frame      8 time   80.000      Reading frame      10 time  100.000    ->  frame      9 time   90.000      Reading frame      11 time  110.000    ->  frame     10 time  100.000      Reading frame      12 time  120.000    ->  frame     11 time  110.000      Reading frame      13 time  130.000    ->  frame     12 time  120.000      Reading frame      14 time  140.000    ->  frame     13 time  130.000      Reading frame      15 time  150.000    ->  frame     14 time  140.000      Reading frame      16 time  160.000    ->  frame     15 time  150.000      Reading frame      17 time  170.000    ->  frame     16 time  160.000      Reading frame      18 time  180.000    ->  frame     17 time  170.000      Reading frame      19 time  190.000    ->  frame     18 time  180.000      Reading frame      20 time  200.000    ->  frame     19 time  190.000      Reading frame      30 time  300.000    ->  frame     29 time  290.000      Reading frame      40 time  400.000    ->  frame     39 time  390.000      Reading frame      50 time  500.000    ->  frame     49 time  490.000      Reading frame      60 time  600.000    ->  frame     59 time  590.000      Reading frame      70 time  700.000    ->  frame     69 time  690.000      Reading frame      80 time  800.000    ->  frame     79 time  790.000      Reading frame      90 time  900.000    ->  frame     89 time  890.000      Reading frame     100 time 1000.000    ->  frame     99 time  990.000      Reading frame     110 time 1100.000    ->  frame    109 time 1090.000      Reading frame     120 time 1200.000    ->  frame    119 time 1190.000      Reading frame     130 time 1300.000    ->  frame    129 time 1290.000      Reading frame     140 time 1400.000    ->  frame    139 time 1390.000      Reading frame     150 time 1500.000    ->  frame    149 time 1490.000      Reading frame     160 time 1600.000    ->  frame    159 time 1590.000      Reading frame     170 time 1700.000    ->  frame    169 time 1690.000      Reading frame     180 time 1800.000    ->  frame    179 time 1790.000      Reading frame     190 time 1900.000    ->  frame    189 time 1890.000      Reading frame     200 time 2000.000    ->  frame    199 time 1990.000      Reading frame     300 time 3000.000    ->  frame    299 time 2990.000      Reading frame     400 time 4000.000    ->  frame    399 time 3990.000      Reading frame     500 time 5000.000    ->  frame    499 time 4990.000      Reading frame     600 time 6000.000    ->  frame    599 time 5990.000      Reading frame     700 time 7000.000    ->  frame    699 time 6990.000      Reading frame     800 time 8000.000    ->  frame    799 time 7990.000      Reading frame     900 time 9000.000    ->  frame    899 time 8990.000      Reading frame    1000 time 10000.000    ->  frame    999 time 9990.000      Last frame       1000 time 10000.000   
+ ->  frame   1000 time 10000.000      
+Last written: frame   1000 time 10000.000
+
+
+GROMACS reminds you: "If at one time or another I have brushed a few colleagues the wrong way, I must apologize: I had not realized that they were covered with fur." (Edwin Chargaff)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for centering
+Selected 1: 'Protein'
+Select group for output
+Selected 0: 'System'
+Step 3: Extracting last frame...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_003/remd.tpr -f replicas/replica_003/final.xtc -o output/final_pdbs/replica_003_final_structure.pdb -dump 10000
+
+Will write pdb: Protein data bank file
+Reading file replicas/replica_003/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_003/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_003/final.xtc is 0.001 (nm)
+Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+Dumping frame at t= 10000 ps
+ ->  frame      0 time 10000.000      
+Last written: frame      0 time 10000.000
+
+
+GROMACS reminds you: "Here, kitty, kitty..." (Erwin Schroedinger)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output
+Selected 0: 'System'
+replica_003: Processed and last frame extracted.
+
+--- Processing replica_004 ---
+Step 1: Creating index file...
+                     :-) GROMACS - gmx make_ndx, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi make_ndx -f em.gro -o replicas/replica_004/index.ndx
+
+
+Reading structure file
+
+GROMACS reminds you: "A scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die and a new generation grows up that is familiar with it." (Max Planck)
+
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+  0 System              :  5910 atoms
+  1 Protein             :   304 atoms
+  2 Protein-H           :   154 atoms
+  3 C-alpha             :    20 atoms
+  4 Backbone            :    60 atoms
+  5 MainChain           :    81 atoms
+  6 MainChain+Cb        :    98 atoms
+  7 MainChain+H         :    99 atoms
+  8 SideChain           :   205 atoms
+  9 SideChain-H         :    73 atoms
+ 10 Prot-Masses         :   304 atoms
+ 11 non-Protein         :  5606 atoms
+ 12 Water               :  5595 atoms
+ 13 SOL                 :  5595 atoms
+ 14 non-Water           :   315 atoms
+ 15 Ion                 :    11 atoms
+ 16 Water_and_ions      :  5606 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 
+Copied index group 1 'Protein'
+Found 3880 atoms with name H*
+Complemented group: 2030 atoms
+Merged two groups with AND: 304 2030 -> 154
+
+> 
+
+> 
+Step 2: Centering and fixing PBC...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_004/remd.tpr -f replicas/replica_004/remd.xtc -o replicas/replica_004/final.xtc -center -pbc mol -ur compact -boxcenter tric
+
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file replicas/replica_004/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_004/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_004/remd.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Reading frame       1 time   10.000    ->  frame      0 time    0.000      Reading frame       2 time   20.000    ->  frame      1 time   10.000      Reading frame       3 time   30.000    ->  frame      2 time   20.000      Reading frame       4 time   40.000    ->  frame      3 time   30.000      Reading frame       5 time   50.000    ->  frame      4 time   40.000      Reading frame       6 time   60.000    ->  frame      5 time   50.000      Reading frame       7 time   70.000    ->  frame      6 time   60.000      Reading frame       8 time   80.000    ->  frame      7 time   70.000      Reading frame       9 time   90.000    ->  frame      8 time   80.000      Reading frame      10 time  100.000    ->  frame      9 time   90.000      Reading frame      11 time  110.000    ->  frame     10 time  100.000      Reading frame      12 time  120.000    ->  frame     11 time  110.000      Reading frame      13 time  130.000    ->  frame     12 time  120.000      Reading frame      14 time  140.000    ->  frame     13 time  130.000      Reading frame      15 time  150.000    ->  frame     14 time  140.000      Reading frame      16 time  160.000    ->  frame     15 time  150.000      Reading frame      17 time  170.000    ->  frame     16 time  160.000      Reading frame      18 time  180.000    ->  frame     17 time  170.000      Reading frame      19 time  190.000    ->  frame     18 time  180.000      Reading frame      20 time  200.000    ->  frame     19 time  190.000      Reading frame      30 time  300.000    ->  frame     29 time  290.000      Reading frame      40 time  400.000    ->  frame     39 time  390.000      Reading frame      50 time  500.000    ->  frame     49 time  490.000      Reading frame      60 time  600.000    ->  frame     59 time  590.000      Reading frame      70 time  700.000    ->  frame     69 time  690.000      Reading frame      80 time  800.000    ->  frame     79 time  790.000      Reading frame      90 time  900.000    ->  frame     89 time  890.000      Reading frame     100 time 1000.000    ->  frame     99 time  990.000      Reading frame     110 time 1100.000    ->  frame    109 time 1090.000      Reading frame     120 time 1200.000    ->  frame    119 time 1190.000      Reading frame     130 time 1300.000    ->  frame    129 time 1290.000      Reading frame     140 time 1400.000    ->  frame    139 time 1390.000      Reading frame     150 time 1500.000    ->  frame    149 time 1490.000      Reading frame     160 time 1600.000    ->  frame    159 time 1590.000      Reading frame     170 time 1700.000    ->  frame    169 time 1690.000      Reading frame     180 time 1800.000    ->  frame    179 time 1790.000      Reading frame     190 time 1900.000    ->  frame    189 time 1890.000      Reading frame     200 time 2000.000    ->  frame    199 time 1990.000      Reading frame     300 time 3000.000    ->  frame    299 time 2990.000      Reading frame     400 time 4000.000    ->  frame    399 time 3990.000      Reading frame     500 time 5000.000    ->  frame    499 time 4990.000      Reading frame     600 time 6000.000    ->  frame    599 time 5990.000      Reading frame     700 time 7000.000    ->  frame    699 time 6990.000      Reading frame     800 time 8000.000    ->  frame    799 time 7990.000      Reading frame     900 time 9000.000    ->  frame    899 time 8990.000      Reading frame    1000 time 10000.000    ->  frame    999 time 9990.000      Last frame       1000 time 10000.000   
+ ->  frame   1000 time 10000.000      
+Last written: frame   1000 time 10000.000
+
+
+GROMACS reminds you: "Everybody is Smashing Things Down" (Offspring)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for centering
+Selected 1: 'Protein'
+Select group for output
+Selected 0: 'System'
+Step 3: Extracting last frame...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_004/remd.tpr -f replicas/replica_004/final.xtc -o output/final_pdbs/replica_004_final_structure.pdb -dump 10000
+
+Will write pdb: Protein data bank file
+Reading file replicas/replica_004/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_004/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_004/final.xtc is 0.001 (nm)
+Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+Dumping frame at t= 10000 ps
+ ->  frame      0 time 10000.000      
+Last written: frame      0 time 10000.000
+
+
+GROMACS reminds you: "Don't pay any attention to what they write about you. Just measure it in inches." (Andy Warhol)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output
+Selected 0: 'System'
+replica_004: Processed and last frame extracted.
+
+--- Processing replica_005 ---
+Step 1: Creating index file...
+                     :-) GROMACS - gmx make_ndx, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi make_ndx -f em.gro -o replicas/replica_005/index.ndx
+
+
+Reading structure file
+
+GROMACS reminds you: "Jede der Scherben spiegelt das Licht" (Wir sind Helden)
+
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+  0 System              :  5910 atoms
+  1 Protein             :   304 atoms
+  2 Protein-H           :   154 atoms
+  3 C-alpha             :    20 atoms
+  4 Backbone            :    60 atoms
+  5 MainChain           :    81 atoms
+  6 MainChain+Cb        :    98 atoms
+  7 MainChain+H         :    99 atoms
+  8 SideChain           :   205 atoms
+  9 SideChain-H         :    73 atoms
+ 10 Prot-Masses         :   304 atoms
+ 11 non-Protein         :  5606 atoms
+ 12 Water               :  5595 atoms
+ 13 SOL                 :  5595 atoms
+ 14 non-Water           :   315 atoms
+ 15 Ion                 :    11 atoms
+ 16 Water_and_ions      :  5606 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 
+Copied index group 1 'Protein'
+Found 3880 atoms with name H*
+Complemented group: 2030 atoms
+Merged two groups with AND: 304 2030 -> 154
+
+> 
+
+> 
+Step 2: Centering and fixing PBC...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_005/remd.tpr -f replicas/replica_005/remd.xtc -o replicas/replica_005/final.xtc -center -pbc mol -ur compact -boxcenter tric
+
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file replicas/replica_005/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_005/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_005/remd.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Reading frame       1 time   10.000    ->  frame      0 time    0.000      Reading frame       2 time   20.000    ->  frame      1 time   10.000      Reading frame       3 time   30.000    ->  frame      2 time   20.000      Reading frame       4 time   40.000    ->  frame      3 time   30.000      Reading frame       5 time   50.000    ->  frame      4 time   40.000      Reading frame       6 time   60.000    ->  frame      5 time   50.000      Reading frame       7 time   70.000    ->  frame      6 time   60.000      Reading frame       8 time   80.000    ->  frame      7 time   70.000      Reading frame       9 time   90.000    ->  frame      8 time   80.000      Reading frame      10 time  100.000    ->  frame      9 time   90.000      Reading frame      11 time  110.000    ->  frame     10 time  100.000      Reading frame      12 time  120.000    ->  frame     11 time  110.000      Reading frame      13 time  130.000    ->  frame     12 time  120.000      Reading frame      14 time  140.000    ->  frame     13 time  130.000      Reading frame      15 time  150.000    ->  frame     14 time  140.000      Reading frame      16 time  160.000    ->  frame     15 time  150.000      Reading frame      17 time  170.000    ->  frame     16 time  160.000      Reading frame      18 time  180.000    ->  frame     17 time  170.000      Reading frame      19 time  190.000    ->  frame     18 time  180.000      Reading frame      20 time  200.000    ->  frame     19 time  190.000      Reading frame      30 time  300.000    ->  frame     29 time  290.000      Reading frame      40 time  400.000    ->  frame     39 time  390.000      Reading frame      50 time  500.000    ->  frame     49 time  490.000      Reading frame      60 time  600.000    ->  frame     59 time  590.000      Reading frame      70 time  700.000    ->  frame     69 time  690.000      Reading frame      80 time  800.000    ->  frame     79 time  790.000      Reading frame      90 time  900.000    ->  frame     89 time  890.000      Reading frame     100 time 1000.000    ->  frame     99 time  990.000      Reading frame     110 time 1100.000    ->  frame    109 time 1090.000      Reading frame     120 time 1200.000    ->  frame    119 time 1190.000      Reading frame     130 time 1300.000    ->  frame    129 time 1290.000      Reading frame     140 time 1400.000    ->  frame    139 time 1390.000      Reading frame     150 time 1500.000    ->  frame    149 time 1490.000      Reading frame     160 time 1600.000    ->  frame    159 time 1590.000      Reading frame     170 time 1700.000    ->  frame    169 time 1690.000      Reading frame     180 time 1800.000    ->  frame    179 time 1790.000      Reading frame     190 time 1900.000    ->  frame    189 time 1890.000      Reading frame     200 time 2000.000    ->  frame    199 time 1990.000      Reading frame     300 time 3000.000    ->  frame    299 time 2990.000      Reading frame     400 time 4000.000    ->  frame    399 time 3990.000      Reading frame     500 time 5000.000    ->  frame    499 time 4990.000      Reading frame     600 time 6000.000    ->  frame    599 time 5990.000      Reading frame     700 time 7000.000    ->  frame    699 time 6990.000      Reading frame     800 time 8000.000    ->  frame    799 time 7990.000      Reading frame     900 time 9000.000    ->  frame    899 time 8990.000      Reading frame    1000 time 10000.000    ->  frame    999 time 9990.000      Last frame       1000 time 10000.000   
+ ->  frame   1000 time 10000.000      
+Last written: frame   1000 time 10000.000
+
+
+GROMACS reminds you: "There is no reason for any individual to have a computer in his home." (Ken Olsen, head of Digital Equipment Corp.)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for centering
+Selected 1: 'Protein'
+Select group for output
+Selected 0: 'System'
+Step 3: Extracting last frame...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_005/remd.tpr -f replicas/replica_005/final.xtc -o output/final_pdbs/replica_005_final_structure.pdb -dump 10000
+
+Will write pdb: Protein data bank file
+Reading file replicas/replica_005/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_005/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_005/final.xtc is 0.001 (nm)
+Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+Dumping frame at t= 10000 ps
+ ->  frame      0 time 10000.000      
+Last written: frame      0 time 10000.000
+
+
+GROMACS reminds you: "Mathematics is a game played according to certain rules with meaningless marks on paper." (David Hilbert)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output
+Selected 0: 'System'
+replica_005: Processed and last frame extracted.
+
+--- Processing replica_006 ---
+Step 1: Creating index file...
+                     :-) GROMACS - gmx make_ndx, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi make_ndx -f em.gro -o replicas/replica_006/index.ndx
+
+
+Reading structure file
+
+GROMACS reminds you: "Mathematics is a game played according to certain rules with meaningless marks on paper." (David Hilbert)
+
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+  0 System              :  5910 atoms
+  1 Protein             :   304 atoms
+  2 Protein-H           :   154 atoms
+  3 C-alpha             :    20 atoms
+  4 Backbone            :    60 atoms
+  5 MainChain           :    81 atoms
+  6 MainChain+Cb        :    98 atoms
+  7 MainChain+H         :    99 atoms
+  8 SideChain           :   205 atoms
+  9 SideChain-H         :    73 atoms
+ 10 Prot-Masses         :   304 atoms
+ 11 non-Protein         :  5606 atoms
+ 12 Water               :  5595 atoms
+ 13 SOL                 :  5595 atoms
+ 14 non-Water           :   315 atoms
+ 15 Ion                 :    11 atoms
+ 16 Water_and_ions      :  5606 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 
+Copied index group 1 'Protein'
+Found 3880 atoms with name H*
+Complemented group: 2030 atoms
+Merged two groups with AND: 304 2030 -> 154
+
+> 
+
+> 
+Step 2: Centering and fixing PBC...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_006/remd.tpr -f replicas/replica_006/remd.xtc -o replicas/replica_006/final.xtc -center -pbc mol -ur compact -boxcenter tric
+
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file replicas/replica_006/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_006/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_006/remd.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Reading frame       1 time   10.000    ->  frame      0 time    0.000      Reading frame       2 time   20.000    ->  frame      1 time   10.000      Reading frame       3 time   30.000    ->  frame      2 time   20.000      Reading frame       4 time   40.000    ->  frame      3 time   30.000      Reading frame       5 time   50.000    ->  frame      4 time   40.000      Reading frame       6 time   60.000    ->  frame      5 time   50.000      Reading frame       7 time   70.000    ->  frame      6 time   60.000      Reading frame       8 time   80.000    ->  frame      7 time   70.000      Reading frame       9 time   90.000    ->  frame      8 time   80.000      Reading frame      10 time  100.000    ->  frame      9 time   90.000      Reading frame      11 time  110.000    ->  frame     10 time  100.000      Reading frame      12 time  120.000    ->  frame     11 time  110.000      Reading frame      13 time  130.000    ->  frame     12 time  120.000      Reading frame      14 time  140.000    ->  frame     13 time  130.000      Reading frame      15 time  150.000    ->  frame     14 time  140.000      Reading frame      16 time  160.000    ->  frame     15 time  150.000      Reading frame      17 time  170.000    ->  frame     16 time  160.000      Reading frame      18 time  180.000    ->  frame     17 time  170.000      Reading frame      19 time  190.000    ->  frame     18 time  180.000      Reading frame      20 time  200.000    ->  frame     19 time  190.000      Reading frame      30 time  300.000    ->  frame     29 time  290.000      Reading frame      40 time  400.000    ->  frame     39 time  390.000      Reading frame      50 time  500.000    ->  frame     49 time  490.000      Reading frame      60 time  600.000    ->  frame     59 time  590.000      Reading frame      70 time  700.000    ->  frame     69 time  690.000      Reading frame      80 time  800.000    ->  frame     79 time  790.000      Reading frame      90 time  900.000    ->  frame     89 time  890.000      Reading frame     100 time 1000.000    ->  frame     99 time  990.000      Reading frame     110 time 1100.000    ->  frame    109 time 1090.000      Reading frame     120 time 1200.000    ->  frame    119 time 1190.000      Reading frame     130 time 1300.000    ->  frame    129 time 1290.000      Reading frame     140 time 1400.000    ->  frame    139 time 1390.000      Reading frame     150 time 1500.000    ->  frame    149 time 1490.000      Reading frame     160 time 1600.000    ->  frame    159 time 1590.000      Reading frame     170 time 1700.000    ->  frame    169 time 1690.000      Reading frame     180 time 1800.000    ->  frame    179 time 1790.000      Reading frame     190 time 1900.000    ->  frame    189 time 1890.000      Reading frame     200 time 2000.000    ->  frame    199 time 1990.000      Reading frame     300 time 3000.000    ->  frame    299 time 2990.000      Reading frame     400 time 4000.000    ->  frame    399 time 3990.000      Reading frame     500 time 5000.000    ->  frame    499 time 4990.000      Reading frame     600 time 6000.000    ->  frame    599 time 5990.000      Reading frame     700 time 7000.000    ->  frame    699 time 6990.000      Reading frame     800 time 8000.000    ->  frame    799 time 7990.000      Reading frame     900 time 9000.000    ->  frame    899 time 8990.000      Reading frame    1000 time 10000.000    ->  frame    999 time 9990.000      Last frame       1000 time 10000.000   
+ ->  frame   1000 time 10000.000      
+Last written: frame   1000 time 10000.000
+
+
+GROMACS reminds you: "Performance and power are great targets for tuning, but really you want to tune for money!" (Erik Lindahl)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for centering
+Selected 1: 'Protein'
+Select group for output
+Selected 0: 'System'
+Step 3: Extracting last frame...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_006/remd.tpr -f replicas/replica_006/final.xtc -o output/final_pdbs/replica_006_final_structure.pdb -dump 10000
+
+Will write pdb: Protein data bank file
+Reading file replicas/replica_006/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_006/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_006/final.xtc is 0.001 (nm)
+Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+Dumping frame at t= 10000 ps
+ ->  frame      0 time 10000.000      
+Last written: frame      0 time 10000.000
+
+
+GROMACS reminds you: "Can someone please tell Icarus that he's not the only one falling from the sky?" (Urban Dance Squad)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output
+Selected 0: 'System'
+replica_006: Processed and last frame extracted.
+
+--- Processing replica_007 ---
+Step 1: Creating index file...
+                     :-) GROMACS - gmx make_ndx, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi make_ndx -f em.gro -o replicas/replica_007/index.ndx
+
+
+Reading structure file
+
+GROMACS reminds you: "Can someone please tell Icarus that he's not the only one falling from the sky?" (Urban Dance Squad)
+
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+  0 System              :  5910 atoms
+  1 Protein             :   304 atoms
+  2 Protein-H           :   154 atoms
+  3 C-alpha             :    20 atoms
+  4 Backbone            :    60 atoms
+  5 MainChain           :    81 atoms
+  6 MainChain+Cb        :    98 atoms
+  7 MainChain+H         :    99 atoms
+  8 SideChain           :   205 atoms
+  9 SideChain-H         :    73 atoms
+ 10 Prot-Masses         :   304 atoms
+ 11 non-Protein         :  5606 atoms
+ 12 Water               :  5595 atoms
+ 13 SOL                 :  5595 atoms
+ 14 non-Water           :   315 atoms
+ 15 Ion                 :    11 atoms
+ 16 Water_and_ions      :  5606 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 
+Copied index group 1 'Protein'
+Found 3880 atoms with name H*
+Complemented group: 2030 atoms
+Merged two groups with AND: 304 2030 -> 154
+
+> 
+
+> 
+Step 2: Centering and fixing PBC...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_007/remd.tpr -f replicas/replica_007/remd.xtc -o replicas/replica_007/final.xtc -center -pbc mol -ur compact -boxcenter tric
+
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file replicas/replica_007/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_007/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_007/remd.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Reading frame       1 time   10.000    ->  frame      0 time    0.000      Reading frame       2 time   20.000    ->  frame      1 time   10.000      Reading frame       3 time   30.000    ->  frame      2 time   20.000      Reading frame       4 time   40.000    ->  frame      3 time   30.000      Reading frame       5 time   50.000    ->  frame      4 time   40.000      Reading frame       6 time   60.000    ->  frame      5 time   50.000      Reading frame       7 time   70.000    ->  frame      6 time   60.000      Reading frame       8 time   80.000    ->  frame      7 time   70.000      Reading frame       9 time   90.000    ->  frame      8 time   80.000      Reading frame      10 time  100.000    ->  frame      9 time   90.000      Reading frame      11 time  110.000    ->  frame     10 time  100.000      Reading frame      12 time  120.000    ->  frame     11 time  110.000      Reading frame      13 time  130.000    ->  frame     12 time  120.000      Reading frame      14 time  140.000    ->  frame     13 time  130.000      Reading frame      15 time  150.000    ->  frame     14 time  140.000      Reading frame      16 time  160.000    ->  frame     15 time  150.000      Reading frame      17 time  170.000    ->  frame     16 time  160.000      Reading frame      18 time  180.000    ->  frame     17 time  170.000      Reading frame      19 time  190.000    ->  frame     18 time  180.000      Reading frame      20 time  200.000    ->  frame     19 time  190.000      Reading frame      30 time  300.000    ->  frame     29 time  290.000      Reading frame      40 time  400.000    ->  frame     39 time  390.000      Reading frame      50 time  500.000    ->  frame     49 time  490.000      Reading frame      60 time  600.000    ->  frame     59 time  590.000      Reading frame      70 time  700.000    ->  frame     69 time  690.000      Reading frame      80 time  800.000    ->  frame     79 time  790.000      Reading frame      90 time  900.000    ->  frame     89 time  890.000      Reading frame     100 time 1000.000    ->  frame     99 time  990.000      Reading frame     110 time 1100.000    ->  frame    109 time 1090.000      Reading frame     120 time 1200.000    ->  frame    119 time 1190.000      Reading frame     130 time 1300.000    ->  frame    129 time 1290.000      Reading frame     140 time 1400.000    ->  frame    139 time 1390.000      Reading frame     150 time 1500.000    ->  frame    149 time 1490.000      Reading frame     160 time 1600.000    ->  frame    159 time 1590.000      Reading frame     170 time 1700.000    ->  frame    169 time 1690.000      Reading frame     180 time 1800.000    ->  frame    179 time 1790.000      Reading frame     190 time 1900.000    ->  frame    189 time 1890.000      Reading frame     200 time 2000.000    ->  frame    199 time 1990.000      Reading frame     300 time 3000.000    ->  frame    299 time 2990.000      Reading frame     400 time 4000.000    ->  frame    399 time 3990.000      Reading frame     500 time 5000.000    ->  frame    499 time 4990.000      Reading frame     600 time 6000.000    ->  frame    599 time 5990.000      Reading frame     700 time 7000.000    ->  frame    699 time 6990.000      Reading frame     800 time 8000.000    ->  frame    799 time 7990.000      Reading frame     900 time 9000.000    ->  frame    899 time 8990.000      Reading frame    1000 time 10000.000    ->  frame    999 time 9990.000      Last frame       1000 time 10000.000   
+ ->  frame   1000 time 10000.000      
+Last written: frame   1000 time 10000.000
+
+
+GROMACS reminds you: "It's just B I O L O G Y, can't you see?" (Joe Jackson)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for centering
+Selected 1: 'Protein'
+Select group for output
+Selected 0: 'System'
+Step 3: Extracting last frame...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_007/remd.tpr -f replicas/replica_007/final.xtc -o output/final_pdbs/replica_007_final_structure.pdb -dump 10000
+
+Will write pdb: Protein data bank file
+Reading file replicas/replica_007/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_007/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_007/final.xtc is 0.001 (nm)
+Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+Dumping frame at t= 10000 ps
+ ->  frame      0 time 10000.000      
+Last written: frame      0 time 10000.000
+
+
+GROMACS reminds you: "It's just B I O L O G Y, can't you see?" (Joe Jackson)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output
+Selected 0: 'System'
+replica_007: Processed and last frame extracted.
+
+--- Processing replica_008 ---
+Step 1: Creating index file...
+                     :-) GROMACS - gmx make_ndx, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi make_ndx -f em.gro -o replicas/replica_008/index.ndx
+
+
+Reading structure file
+
+GROMACS reminds you: "Jede der Scherben spiegelt das Licht" (Wir sind Helden)
+
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+  0 System              :  5910 atoms
+  1 Protein             :   304 atoms
+  2 Protein-H           :   154 atoms
+  3 C-alpha             :    20 atoms
+  4 Backbone            :    60 atoms
+  5 MainChain           :    81 atoms
+  6 MainChain+Cb        :    98 atoms
+  7 MainChain+H         :    99 atoms
+  8 SideChain           :   205 atoms
+  9 SideChain-H         :    73 atoms
+ 10 Prot-Masses         :   304 atoms
+ 11 non-Protein         :  5606 atoms
+ 12 Water               :  5595 atoms
+ 13 SOL                 :  5595 atoms
+ 14 non-Water           :   315 atoms
+ 15 Ion                 :    11 atoms
+ 16 Water_and_ions      :  5606 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 
+Copied index group 1 'Protein'
+Found 3880 atoms with name H*
+Complemented group: 2030 atoms
+Merged two groups with AND: 304 2030 -> 154
+
+> 
+
+> 
+Step 2: Centering and fixing PBC...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_008/remd.tpr -f replicas/replica_008/remd.xtc -o replicas/replica_008/final.xtc -center -pbc mol -ur compact -boxcenter tric
+
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file replicas/replica_008/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_008/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_008/remd.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Reading frame       1 time   10.000    ->  frame      0 time    0.000      Reading frame       2 time   20.000    ->  frame      1 time   10.000      Reading frame       3 time   30.000    ->  frame      2 time   20.000      Reading frame       4 time   40.000    ->  frame      3 time   30.000      Reading frame       5 time   50.000    ->  frame      4 time   40.000      Reading frame       6 time   60.000    ->  frame      5 time   50.000      Reading frame       7 time   70.000    ->  frame      6 time   60.000      Reading frame       8 time   80.000    ->  frame      7 time   70.000      Reading frame       9 time   90.000    ->  frame      8 time   80.000      Reading frame      10 time  100.000    ->  frame      9 time   90.000      Reading frame      11 time  110.000    ->  frame     10 time  100.000      Reading frame      12 time  120.000    ->  frame     11 time  110.000      Reading frame      13 time  130.000    ->  frame     12 time  120.000      Reading frame      14 time  140.000    ->  frame     13 time  130.000      Reading frame      15 time  150.000    ->  frame     14 time  140.000      Reading frame      16 time  160.000    ->  frame     15 time  150.000      Reading frame      17 time  170.000    ->  frame     16 time  160.000      Reading frame      18 time  180.000    ->  frame     17 time  170.000      Reading frame      19 time  190.000    ->  frame     18 time  180.000      Reading frame      20 time  200.000    ->  frame     19 time  190.000      Reading frame      30 time  300.000    ->  frame     29 time  290.000      Reading frame      40 time  400.000    ->  frame     39 time  390.000      Reading frame      50 time  500.000    ->  frame     49 time  490.000      Reading frame      60 time  600.000    ->  frame     59 time  590.000      Reading frame      70 time  700.000    ->  frame     69 time  690.000      Reading frame      80 time  800.000    ->  frame     79 time  790.000      Reading frame      90 time  900.000    ->  frame     89 time  890.000      Reading frame     100 time 1000.000    ->  frame     99 time  990.000      Reading frame     110 time 1100.000    ->  frame    109 time 1090.000      Reading frame     120 time 1200.000    ->  frame    119 time 1190.000      Reading frame     130 time 1300.000    ->  frame    129 time 1290.000      Reading frame     140 time 1400.000    ->  frame    139 time 1390.000      Reading frame     150 time 1500.000    ->  frame    149 time 1490.000      Reading frame     160 time 1600.000    ->  frame    159 time 1590.000      Reading frame     170 time 1700.000    ->  frame    169 time 1690.000      Reading frame     180 time 1800.000    ->  frame    179 time 1790.000      Reading frame     190 time 1900.000    ->  frame    189 time 1890.000      Reading frame     200 time 2000.000    ->  frame    199 time 1990.000      Reading frame     300 time 3000.000    ->  frame    299 time 2990.000      Reading frame     400 time 4000.000    ->  frame    399 time 3990.000      Reading frame     500 time 5000.000    ->  frame    499 time 4990.000      Reading frame     600 time 6000.000    ->  frame    599 time 5990.000      Reading frame     700 time 7000.000    ->  frame    699 time 6990.000      Reading frame     800 time 8000.000    ->  frame    799 time 7990.000      Reading frame     900 time 9000.000    ->  frame    899 time 8990.000      Reading frame    1000 time 10000.000    ->  frame    999 time 9990.000      Last frame       1000 time 10000.000   
+ ->  frame   1000 time 10000.000      
+Last written: frame   1000 time 10000.000
+
+
+GROMACS reminds you: "I wanted to make a clever chemistry joke, but the best ones Argon." (39.948)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for centering
+Selected 1: 'Protein'
+Select group for output
+Selected 0: 'System'
+Step 3: Extracting last frame...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_008/remd.tpr -f replicas/replica_008/final.xtc -o output/final_pdbs/replica_008_final_structure.pdb -dump 10000
+
+Will write pdb: Protein data bank file
+Reading file replicas/replica_008/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_008/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_008/final.xtc is 0.001 (nm)
+Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+Dumping frame at t= 10000 ps
+ ->  frame      0 time 10000.000      
+Last written: frame      0 time 10000.000
+
+
+GROMACS reminds you: "In science, truth always wins." (Max Perutz)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output
+Selected 0: 'System'
+replica_008: Processed and last frame extracted.
+
+--- Processing replica_009 ---
+Step 1: Creating index file...
+                     :-) GROMACS - gmx make_ndx, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi make_ndx -f em.gro -o replicas/replica_009/index.ndx
+
+
+Reading structure file
+
+GROMACS reminds you: "Is That a Real Poncho ?" (F. Zappa)
+
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+  0 System              :  5910 atoms
+  1 Protein             :   304 atoms
+  2 Protein-H           :   154 atoms
+  3 C-alpha             :    20 atoms
+  4 Backbone            :    60 atoms
+  5 MainChain           :    81 atoms
+  6 MainChain+Cb        :    98 atoms
+  7 MainChain+H         :    99 atoms
+  8 SideChain           :   205 atoms
+  9 SideChain-H         :    73 atoms
+ 10 Prot-Masses         :   304 atoms
+ 11 non-Protein         :  5606 atoms
+ 12 Water               :  5595 atoms
+ 13 SOL                 :  5595 atoms
+ 14 non-Water           :   315 atoms
+ 15 Ion                 :    11 atoms
+ 16 Water_and_ions      :  5606 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 
+Copied index group 1 'Protein'
+Found 3880 atoms with name H*
+Complemented group: 2030 atoms
+Merged two groups with AND: 304 2030 -> 154
+
+> 
+
+> 
+Step 2: Centering and fixing PBC...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_009/remd.tpr -f replicas/replica_009/remd.xtc -o replicas/replica_009/final.xtc -center -pbc mol -ur compact -boxcenter tric
+
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file replicas/replica_009/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_009/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_009/remd.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Reading frame       1 time   10.000    ->  frame      0 time    0.000      Reading frame       2 time   20.000    ->  frame      1 time   10.000      Reading frame       3 time   30.000    ->  frame      2 time   20.000      Reading frame       4 time   40.000    ->  frame      3 time   30.000      Reading frame       5 time   50.000    ->  frame      4 time   40.000      Reading frame       6 time   60.000    ->  frame      5 time   50.000      Reading frame       7 time   70.000    ->  frame      6 time   60.000      Reading frame       8 time   80.000    ->  frame      7 time   70.000      Reading frame       9 time   90.000    ->  frame      8 time   80.000      Reading frame      10 time  100.000    ->  frame      9 time   90.000      Reading frame      11 time  110.000    ->  frame     10 time  100.000      Reading frame      12 time  120.000    ->  frame     11 time  110.000      Reading frame      13 time  130.000    ->  frame     12 time  120.000      Reading frame      14 time  140.000    ->  frame     13 time  130.000      Reading frame      15 time  150.000    ->  frame     14 time  140.000      Reading frame      16 time  160.000    ->  frame     15 time  150.000      Reading frame      17 time  170.000    ->  frame     16 time  160.000      Reading frame      18 time  180.000    ->  frame     17 time  170.000      Reading frame      19 time  190.000    ->  frame     18 time  180.000      Reading frame      20 time  200.000    ->  frame     19 time  190.000      Reading frame      30 time  300.000    ->  frame     29 time  290.000      Reading frame      40 time  400.000    ->  frame     39 time  390.000      Reading frame      50 time  500.000    ->  frame     49 time  490.000      Reading frame      60 time  600.000    ->  frame     59 time  590.000      Reading frame      70 time  700.000    ->  frame     69 time  690.000      Reading frame      80 time  800.000    ->  frame     79 time  790.000      Reading frame      90 time  900.000    ->  frame     89 time  890.000      Reading frame     100 time 1000.000    ->  frame     99 time  990.000      Reading frame     110 time 1100.000    ->  frame    109 time 1090.000      Reading frame     120 time 1200.000    ->  frame    119 time 1190.000      Reading frame     130 time 1300.000    ->  frame    129 time 1290.000      Reading frame     140 time 1400.000    ->  frame    139 time 1390.000      Reading frame     150 time 1500.000    ->  frame    149 time 1490.000      Reading frame     160 time 1600.000    ->  frame    159 time 1590.000      Reading frame     170 time 1700.000    ->  frame    169 time 1690.000      Reading frame     180 time 1800.000    ->  frame    179 time 1790.000      Reading frame     190 time 1900.000    ->  frame    189 time 1890.000      Reading frame     200 time 2000.000    ->  frame    199 time 1990.000      Reading frame     300 time 3000.000    ->  frame    299 time 2990.000      Reading frame     400 time 4000.000    ->  frame    399 time 3990.000      Reading frame     500 time 5000.000    ->  frame    499 time 4990.000      Reading frame     600 time 6000.000    ->  frame    599 time 5990.000      Reading frame     700 time 7000.000    ->  frame    699 time 6990.000      Reading frame     800 time 8000.000    ->  frame    799 time 7990.000      Reading frame     900 time 9000.000    ->  frame    899 time 8990.000      Reading frame    1000 time 10000.000    ->  frame    999 time 9990.000      Last frame       1000 time 10000.000   
+ ->  frame   1000 time 10000.000      
+Last written: frame   1000 time 10000.000
+
+
+GROMACS reminds you: "If you have any trouble sounding condescending, find a UNIX user to show you how it's done." (Scott Adams, Dilbert Cartoonist)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for centering
+Selected 1: 'Protein'
+Select group for output
+Selected 0: 'System'
+Step 3: Extracting last frame...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_009/remd.tpr -f replicas/replica_009/final.xtc -o output/final_pdbs/replica_009_final_structure.pdb -dump 10000
+
+Will write pdb: Protein data bank file
+Reading file replicas/replica_009/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_009/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_009/final.xtc is 0.001 (nm)
+Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+Dumping frame at t= 10000 ps
+ ->  frame      0 time 10000.000      
+Last written: frame      0 time 10000.000
+
+
+GROMACS reminds you: "The Candlelight Was Just Right" (Beastie Boys)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output
+Selected 0: 'System'
+replica_009: Processed and last frame extracted.
+
+--- Processing replica_010 ---
+Step 1: Creating index file...
+                     :-) GROMACS - gmx make_ndx, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi make_ndx -f em.gro -o replicas/replica_010/index.ndx
+
+
+Reading structure file
+
+GROMACS reminds you: "The Candlelight Was Just Right" (Beastie Boys)
+
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+  0 System              :  5910 atoms
+  1 Protein             :   304 atoms
+  2 Protein-H           :   154 atoms
+  3 C-alpha             :    20 atoms
+  4 Backbone            :    60 atoms
+  5 MainChain           :    81 atoms
+  6 MainChain+Cb        :    98 atoms
+  7 MainChain+H         :    99 atoms
+  8 SideChain           :   205 atoms
+  9 SideChain-H         :    73 atoms
+ 10 Prot-Masses         :   304 atoms
+ 11 non-Protein         :  5606 atoms
+ 12 Water               :  5595 atoms
+ 13 SOL                 :  5595 atoms
+ 14 non-Water           :   315 atoms
+ 15 Ion                 :    11 atoms
+ 16 Water_and_ions      :  5606 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 
+Copied index group 1 'Protein'
+Found 3880 atoms with name H*
+Complemented group: 2030 atoms
+Merged two groups with AND: 304 2030 -> 154
+
+> 
+
+> 
+Step 2: Centering and fixing PBC...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_010/remd.tpr -f replicas/replica_010/remd.xtc -o replicas/replica_010/final.xtc -center -pbc mol -ur compact -boxcenter tric
+
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file replicas/replica_010/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_010/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_010/remd.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Reading frame       1 time   10.000    ->  frame      0 time    0.000      Reading frame       2 time   20.000    ->  frame      1 time   10.000      Reading frame       3 time   30.000    ->  frame      2 time   20.000      Reading frame       4 time   40.000    ->  frame      3 time   30.000      Reading frame       5 time   50.000    ->  frame      4 time   40.000      Reading frame       6 time   60.000    ->  frame      5 time   50.000      Reading frame       7 time   70.000    ->  frame      6 time   60.000      Reading frame       8 time   80.000    ->  frame      7 time   70.000      Reading frame       9 time   90.000    ->  frame      8 time   80.000      Reading frame      10 time  100.000    ->  frame      9 time   90.000      Reading frame      11 time  110.000    ->  frame     10 time  100.000      Reading frame      12 time  120.000    ->  frame     11 time  110.000      Reading frame      13 time  130.000    ->  frame     12 time  120.000      Reading frame      14 time  140.000    ->  frame     13 time  130.000      Reading frame      15 time  150.000    ->  frame     14 time  140.000      Reading frame      16 time  160.000    ->  frame     15 time  150.000      Reading frame      17 time  170.000    ->  frame     16 time  160.000      Reading frame      18 time  180.000    ->  frame     17 time  170.000      Reading frame      19 time  190.000    ->  frame     18 time  180.000      Reading frame      20 time  200.000    ->  frame     19 time  190.000      Reading frame      30 time  300.000    ->  frame     29 time  290.000      Reading frame      40 time  400.000    ->  frame     39 time  390.000      Reading frame      50 time  500.000    ->  frame     49 time  490.000      Reading frame      60 time  600.000    ->  frame     59 time  590.000      Reading frame      70 time  700.000    ->  frame     69 time  690.000      Reading frame      80 time  800.000    ->  frame     79 time  790.000      Reading frame      90 time  900.000    ->  frame     89 time  890.000      Reading frame     100 time 1000.000    ->  frame     99 time  990.000      Reading frame     110 time 1100.000    ->  frame    109 time 1090.000      Reading frame     120 time 1200.000    ->  frame    119 time 1190.000      Reading frame     130 time 1300.000    ->  frame    129 time 1290.000      Reading frame     140 time 1400.000    ->  frame    139 time 1390.000      Reading frame     150 time 1500.000    ->  frame    149 time 1490.000      Reading frame     160 time 1600.000    ->  frame    159 time 1590.000      Reading frame     170 time 1700.000    ->  frame    169 time 1690.000      Reading frame     180 time 1800.000    ->  frame    179 time 1790.000      Reading frame     190 time 1900.000    ->  frame    189 time 1890.000      Reading frame     200 time 2000.000    ->  frame    199 time 1990.000      Reading frame     300 time 3000.000    ->  frame    299 time 2990.000      Reading frame     400 time 4000.000    ->  frame    399 time 3990.000      Reading frame     500 time 5000.000    ->  frame    499 time 4990.000      Reading frame     600 time 6000.000    ->  frame    599 time 5990.000      Reading frame     700 time 7000.000    ->  frame    699 time 6990.000      Reading frame     800 time 8000.000    ->  frame    799 time 7990.000      Reading frame     900 time 9000.000    ->  frame    899 time 8990.000      Reading frame    1000 time 10000.000    ->  frame    999 time 9990.000      Last frame       1000 time 10000.000   
+ ->  frame   1000 time 10000.000      
+Last written: frame   1000 time 10000.000
+
+
+GROMACS reminds you: "It Wouldn't Hurt to Wipe Once In a While" (Beavis and Butthead)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for centering
+Selected 1: 'Protein'
+Select group for output
+Selected 0: 'System'
+Step 3: Extracting last frame...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_010/remd.tpr -f replicas/replica_010/final.xtc -o output/final_pdbs/replica_010_final_structure.pdb -dump 10000
+
+Will write pdb: Protein data bank file
+Reading file replicas/replica_010/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_010/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_010/final.xtc is 0.001 (nm)
+Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+Dumping frame at t= 10000 ps
+ ->  frame      0 time 10000.000      
+Last written: frame      0 time 10000.000
+
+
+GROMACS reminds you: "It Wouldn't Hurt to Wipe Once In a While" (Beavis and Butthead)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output
+Selected 0: 'System'
+replica_010: Processed and last frame extracted.
+
+--- Processing replica_011 ---
+Step 1: Creating index file...
+                     :-) GROMACS - gmx make_ndx, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi make_ndx -f em.gro -o replicas/replica_011/index.ndx
+
+
+Reading structure file
+
+GROMACS reminds you: "Sie haben also recht gehabt, Sie Spitzbube. [You were right after all, you rascal.]" (Albert Einstein (letter to Wolfgang Pauli))
+
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+  0 System              :  5910 atoms
+  1 Protein             :   304 atoms
+  2 Protein-H           :   154 atoms
+  3 C-alpha             :    20 atoms
+  4 Backbone            :    60 atoms
+  5 MainChain           :    81 atoms
+  6 MainChain+Cb        :    98 atoms
+  7 MainChain+H         :    99 atoms
+  8 SideChain           :   205 atoms
+  9 SideChain-H         :    73 atoms
+ 10 Prot-Masses         :   304 atoms
+ 11 non-Protein         :  5606 atoms
+ 12 Water               :  5595 atoms
+ 13 SOL                 :  5595 atoms
+ 14 non-Water           :   315 atoms
+ 15 Ion                 :    11 atoms
+ 16 Water_and_ions      :  5606 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 
+Copied index group 1 'Protein'
+Found 3880 atoms with name H*
+Complemented group: 2030 atoms
+Merged two groups with AND: 304 2030 -> 154
+
+> 
+
+> 
+Step 2: Centering and fixing PBC...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_011/remd.tpr -f replicas/replica_011/remd.xtc -o replicas/replica_011/final.xtc -center -pbc mol -ur compact -boxcenter tric
+
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file replicas/replica_011/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_011/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_011/remd.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Reading frame       1 time   10.000    ->  frame      0 time    0.000      Reading frame       2 time   20.000    ->  frame      1 time   10.000      Reading frame       3 time   30.000    ->  frame      2 time   20.000      Reading frame       4 time   40.000    ->  frame      3 time   30.000      Reading frame       5 time   50.000    ->  frame      4 time   40.000      Reading frame       6 time   60.000    ->  frame      5 time   50.000      Reading frame       7 time   70.000    ->  frame      6 time   60.000      Reading frame       8 time   80.000    ->  frame      7 time   70.000      Reading frame       9 time   90.000    ->  frame      8 time   80.000      Reading frame      10 time  100.000    ->  frame      9 time   90.000      Reading frame      11 time  110.000    ->  frame     10 time  100.000      Reading frame      12 time  120.000    ->  frame     11 time  110.000      Reading frame      13 time  130.000    ->  frame     12 time  120.000      Reading frame      14 time  140.000    ->  frame     13 time  130.000      Reading frame      15 time  150.000    ->  frame     14 time  140.000      Reading frame      16 time  160.000    ->  frame     15 time  150.000      Reading frame      17 time  170.000    ->  frame     16 time  160.000      Reading frame      18 time  180.000    ->  frame     17 time  170.000      Reading frame      19 time  190.000    ->  frame     18 time  180.000      Reading frame      20 time  200.000    ->  frame     19 time  190.000      Reading frame      30 time  300.000    ->  frame     29 time  290.000      Reading frame      40 time  400.000    ->  frame     39 time  390.000      Reading frame      50 time  500.000    ->  frame     49 time  490.000      Reading frame      60 time  600.000    ->  frame     59 time  590.000      Reading frame      70 time  700.000    ->  frame     69 time  690.000      Reading frame      80 time  800.000    ->  frame     79 time  790.000      Reading frame      90 time  900.000    ->  frame     89 time  890.000      Reading frame     100 time 1000.000    ->  frame     99 time  990.000      Reading frame     110 time 1100.000    ->  frame    109 time 1090.000      Reading frame     120 time 1200.000    ->  frame    119 time 1190.000      Reading frame     130 time 1300.000    ->  frame    129 time 1290.000      Reading frame     140 time 1400.000    ->  frame    139 time 1390.000      Reading frame     150 time 1500.000    ->  frame    149 time 1490.000      Reading frame     160 time 1600.000    ->  frame    159 time 1590.000      Reading frame     170 time 1700.000    ->  frame    169 time 1690.000      Reading frame     180 time 1800.000    ->  frame    179 time 1790.000      Reading frame     190 time 1900.000    ->  frame    189 time 1890.000      Reading frame     200 time 2000.000    ->  frame    199 time 1990.000      Reading frame     300 time 3000.000    ->  frame    299 time 2990.000      Reading frame     400 time 4000.000    ->  frame    399 time 3990.000      Reading frame     500 time 5000.000    ->  frame    499 time 4990.000      Reading frame     600 time 6000.000    ->  frame    599 time 5990.000      Reading frame     700 time 7000.000    ->  frame    699 time 6990.000      Reading frame     800 time 8000.000    ->  frame    799 time 7990.000      Reading frame     900 time 9000.000    ->  frame    899 time 8990.000      Reading frame    1000 time 10000.000    ->  frame    999 time 9990.000      Last frame       1000 time 10000.000   
+ ->  frame   1000 time 10000.000      
+Last written: frame   1000 time 10000.000
+
+
+GROMACS reminds you: "I Got a Forty Dollar Bill" (F. Zappa)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for centering
+Selected 1: 'Protein'
+Select group for output
+Selected 0: 'System'
+Step 3: Extracting last frame...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_011/remd.tpr -f replicas/replica_011/final.xtc -o output/final_pdbs/replica_011_final_structure.pdb -dump 10000
+
+Will write pdb: Protein data bank file
+Reading file replicas/replica_011/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_011/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_011/final.xtc is 0.001 (nm)
+Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+Dumping frame at t= 10000 ps
+ ->  frame      0 time 10000.000      
+Last written: frame      0 time 10000.000
+
+
+GROMACS reminds you: "The way to succeed is to double your failure rate." (Thomas J. Watson)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output
+Selected 0: 'System'
+replica_011: Processed and last frame extracted.
+
+--- Processing replica_012 ---
+Step 1: Creating index file...
+                     :-) GROMACS - gmx make_ndx, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi make_ndx -f em.gro -o replicas/replica_012/index.ndx
+
+
+Reading structure file
+
+GROMACS reminds you: "The way to succeed is to double your failure rate." (Thomas J. Watson)
+
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:    20    Protein residues
+There are:  1865      Water residues
+There are:    11        Ion residues
+Analysing Protein...
+
+  0 System              :  5910 atoms
+  1 Protein             :   304 atoms
+  2 Protein-H           :   154 atoms
+  3 C-alpha             :    20 atoms
+  4 Backbone            :    60 atoms
+  5 MainChain           :    81 atoms
+  6 MainChain+Cb        :    98 atoms
+  7 MainChain+H         :    99 atoms
+  8 SideChain           :   205 atoms
+  9 SideChain-H         :    73 atoms
+ 10 Prot-Masses         :   304 atoms
+ 11 non-Protein         :  5606 atoms
+ 12 Water               :  5595 atoms
+ 13 SOL                 :  5595 atoms
+ 14 non-Water           :   315 atoms
+ 15 Ion                 :    11 atoms
+ 16 Water_and_ions      :  5606 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 
+Copied index group 1 'Protein'
+Found 3880 atoms with name H*
+Complemented group: 2030 atoms
+Merged two groups with AND: 304 2030 -> 154
+
+> 
+
+> 
+Step 2: Centering and fixing PBC...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_012/remd.tpr -f replicas/replica_012/remd.xtc -o replicas/replica_012/final.xtc -center -pbc mol -ur compact -boxcenter tric
+
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file replicas/replica_012/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_012/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_012/remd.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Reading frame       1 time   10.000    ->  frame      0 time    0.000      Reading frame       2 time   20.000    ->  frame      1 time   10.000      Reading frame       3 time   30.000    ->  frame      2 time   20.000      Reading frame       4 time   40.000    ->  frame      3 time   30.000      Reading frame       5 time   50.000    ->  frame      4 time   40.000      Reading frame       6 time   60.000    ->  frame      5 time   50.000      Reading frame       7 time   70.000    ->  frame      6 time   60.000      Reading frame       8 time   80.000    ->  frame      7 time   70.000      Reading frame       9 time   90.000    ->  frame      8 time   80.000      Reading frame      10 time  100.000    ->  frame      9 time   90.000      Reading frame      11 time  110.000    ->  frame     10 time  100.000      Reading frame      12 time  120.000    ->  frame     11 time  110.000      Reading frame      13 time  130.000    ->  frame     12 time  120.000      Reading frame      14 time  140.000    ->  frame     13 time  130.000      Reading frame      15 time  150.000    ->  frame     14 time  140.000      Reading frame      16 time  160.000    ->  frame     15 time  150.000      Reading frame      17 time  170.000    ->  frame     16 time  160.000      Reading frame      18 time  180.000    ->  frame     17 time  170.000      Reading frame      19 time  190.000    ->  frame     18 time  180.000      Reading frame      20 time  200.000    ->  frame     19 time  190.000      Reading frame      30 time  300.000    ->  frame     29 time  290.000      Reading frame      40 time  400.000    ->  frame     39 time  390.000      Reading frame      50 time  500.000    ->  frame     49 time  490.000      Reading frame      60 time  600.000    ->  frame     59 time  590.000      Reading frame      70 time  700.000    ->  frame     69 time  690.000      Reading frame      80 time  800.000    ->  frame     79 time  790.000      Reading frame      90 time  900.000    ->  frame     89 time  890.000      Reading frame     100 time 1000.000    ->  frame     99 time  990.000      Reading frame     110 time 1100.000    ->  frame    109 time 1090.000      Reading frame     120 time 1200.000    ->  frame    119 time 1190.000      Reading frame     130 time 1300.000    ->  frame    129 time 1290.000      Reading frame     140 time 1400.000    ->  frame    139 time 1390.000      Reading frame     150 time 1500.000    ->  frame    149 time 1490.000      Reading frame     160 time 1600.000    ->  frame    159 time 1590.000      Reading frame     170 time 1700.000    ->  frame    169 time 1690.000      Reading frame     180 time 1800.000    ->  frame    179 time 1790.000      Reading frame     190 time 1900.000    ->  frame    189 time 1890.000      Reading frame     200 time 2000.000    ->  frame    199 time 1990.000      Reading frame     300 time 3000.000    ->  frame    299 time 2990.000      Reading frame     400 time 4000.000    ->  frame    399 time 3990.000      Reading frame     500 time 5000.000    ->  frame    499 time 4990.000      Reading frame     600 time 6000.000    ->  frame    599 time 5990.000      Reading frame     700 time 7000.000    ->  frame    699 time 6990.000      Reading frame     800 time 8000.000    ->  frame    799 time 7990.000      Reading frame     900 time 9000.000    ->  frame    899 time 8990.000      Reading frame    1000 time 10000.000    ->  frame    999 time 9990.000      Last frame       1000 time 10000.000   
+ ->  frame   1000 time 10000.000      
+Last written: frame   1000 time 10000.000
+
+
+GROMACS reminds you: "Science adjusts its views based on what's observed. Faith is the denial of observation so that belief can be preserved." (Tim Minchin)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for centering
+Selected 1: 'Protein'
+Select group for output
+Selected 0: 'System'
+Step 3: Extracting last frame...
+                     :-) GROMACS - gmx trjconv, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi trjconv -s replicas/replica_012/remd.tpr -f replicas/replica_012/final.xtc -o output/final_pdbs/replica_012_final_structure.pdb -dump 10000
+
+Will write pdb: Protein data bank file
+Reading file replicas/replica_012/remd.tpr, VERSION 2024.2 (single precision)
+Reading file replicas/replica_012/remd.tpr, VERSION 2024.2 (single precision)
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Select a group: Reading frame       0 time    0.000   
+Precision of replicas/replica_012/final.xtc is 0.001 (nm)
+Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+Dumping frame at t= 10000 ps
+ ->  frame      0 time 10000.000      
+Last written: frame      0 time 10000.000
+
+
+GROMACS reminds you: "I Don't Want to Calm Down" (Throwing Muses)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output
+Selected 0: 'System'
+replica_012: Processed and last frame extracted.
+
+=== Processing Complete ===

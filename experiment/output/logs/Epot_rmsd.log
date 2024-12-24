@@ -1,0 +1,1165 @@
+Processing replicas/replica_001...
+Calculating RMSD for Replica 001...
+                       :-) GROMACS - gmx rms, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi rms -s em.tpr -f replicas/replica_001/final.xtc -o output/data_files/rmsd_replica_001.xvg -n replicas/replica_001/index.ndx
+
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Select group for least squares fit
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Select group for RMSD calculation
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Reading frame       0 time    0.000   Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+GROMACS reminds you: "If You Want Something Done You Have to Do It Yourself" (Highlander II)
+
+Selected 4: 'Backbone'
+Selected 17: 'protein_heavy'
+Extracting Potential Energy for Replica 001...
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_001/remd.edr -o output/data_files/energy_replica_001.xvg
+
+Opened replicas/replica_001/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "Sometimes Life is Obscene" (Black Crowes)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -81242.7        7.9    328.487   -9.27319  (kJ/mol)
+Replica 001 processed successfully.
+Processing replicas/replica_002...
+Calculating RMSD for Replica 002...
+                       :-) GROMACS - gmx rms, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi rms -s em.tpr -f replicas/replica_002/final.xtc -o output/data_files/rmsd_replica_002.xvg -n replicas/replica_002/index.ndx
+
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Select group for least squares fit
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Select group for RMSD calculation
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Reading frame       0 time    0.000   Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+GROMACS reminds you: "The most exciting phrase to hear in science, the one that heralds new discoveries, is not "Eureka" but "That's funny..."." (Isaac Asimov)
+
+Selected 4: 'Backbone'
+Selected 17: 'protein_heavy'
+Extracting Potential Energy for Replica 002...
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_002/remd.edr -o output/data_files/energy_replica_002.xvg
+
+Opened replicas/replica_002/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "The most exciting phrase to hear in science, the one that heralds new discoveries, is not "Eureka" but "That's funny..."." (Isaac Asimov)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -80395.2        1.7    346.929   -1.85606  (kJ/mol)
+Replica 002 processed successfully.
+Processing replicas/replica_003...
+Calculating RMSD for Replica 003...
+                       :-) GROMACS - gmx rms, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi rms -s em.tpr -f replicas/replica_003/final.xtc -o output/data_files/rmsd_replica_003.xvg -n replicas/replica_003/index.ndx
+
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Select group for least squares fit
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Select group for RMSD calculation
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Reading frame       0 time    0.000   Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+GROMACS reminds you: "I'd Be Water If I Could" (Red Hot Chili Peppers)
+
+Selected 4: 'Backbone'
+Selected 17: 'protein_heavy'
+Extracting Potential Energy for Replica 003...
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_003/remd.edr -o output/data_files/energy_replica_003.xvg
+
+Opened replicas/replica_003/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "The historical meaning of QM/MM: Quanto Mangi, Mamma Mia!" (Attilio Vittorio Vargiu, at BioExcel 2022 Summer School in Sardinia)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -79524.9        5.1    364.446   -11.9579  (kJ/mol)
+Replica 003 processed successfully.
+Processing replicas/replica_004...
+Calculating RMSD for Replica 004...
+                       :-) GROMACS - gmx rms, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi rms -s em.tpr -f replicas/replica_004/final.xtc -o output/data_files/rmsd_replica_004.xvg -n replicas/replica_004/index.ndx
+
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Select group for least squares fit
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Select group for RMSD calculation
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Reading frame       0 time    0.000   Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+GROMACS reminds you: "I Do It All the Time" (Magnapop)
+
+Selected 4: 'Backbone'
+Selected 17: 'protein_heavy'
+Extracting Potential Energy for Replica 004...
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_004/remd.edr -o output/data_files/energy_replica_004.xvg
+
+Opened replicas/replica_004/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "It is Lunchtime" (A.R. Van Buuren)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -78640.8        2.3    385.764    -1.0492  (kJ/mol)
+Replica 004 processed successfully.
+Processing replicas/replica_005...
+Calculating RMSD for Replica 005...
+                       :-) GROMACS - gmx rms, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi rms -s em.tpr -f replicas/replica_005/final.xtc -o output/data_files/rmsd_replica_005.xvg -n replicas/replica_005/index.ndx
+
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Select group for least squares fit
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Select group for RMSD calculation
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Reading frame       0 time    0.000   Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+GROMACS reminds you: "Millions saw the apple fall, Newton was the only one who asked why?" (Bernard Baruch)
+
+Selected 4: 'Backbone'
+Selected 17: 'protein_heavy'
+Extracting Potential Energy for Replica 005...
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_005/remd.edr -o output/data_files/energy_replica_005.xvg
+
+Opened replicas/replica_005/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "Millions saw the apple fall, Newton was the only one who asked why?" (Bernard Baruch)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -77741.2        3.5    406.608   -12.1357  (kJ/mol)
+Replica 005 processed successfully.
+Processing replicas/replica_006...
+Calculating RMSD for Replica 006...
+                       :-) GROMACS - gmx rms, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi rms -s em.tpr -f replicas/replica_006/final.xtc -o output/data_files/rmsd_replica_006.xvg -n replicas/replica_006/index.ndx
+
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Select group for least squares fit
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Select group for RMSD calculation
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Reading frame       0 time    0.000   Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+GROMACS reminds you: "Screw a Lightbulb in your Head" (Gogol Bordello)
+
+Selected 4: 'Backbone'
+Selected 17: 'protein_heavy'
+Extracting Potential Energy for Replica 006...
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_006/remd.edr -o output/data_files/energy_replica_006.xvg
+
+Opened replicas/replica_006/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "Weaseling out of things is important to learn. It's what separates us from the animals... except the weasels." (Homer Simpson)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -76804.3        6.1    432.941   -27.8126  (kJ/mol)
+Replica 006 processed successfully.
+Processing replicas/replica_007...
+Calculating RMSD for Replica 007...
+                       :-) GROMACS - gmx rms, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi rms -s em.tpr -f replicas/replica_007/final.xtc -o output/data_files/rmsd_replica_007.xvg -n replicas/replica_007/index.ndx
+
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Select group for least squares fit
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Select group for RMSD calculation
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Reading frame       0 time    0.000   Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+GROMACS reminds you: "These are Ideas, They are Not Lies" (Magnapop)
+
+Selected 4: 'Backbone'
+Selected 17: 'protein_heavy'
+Extracting Potential Energy for Replica 007...
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_007/remd.edr -o output/data_files/energy_replica_007.xvg
+
+Opened replicas/replica_007/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "These are Ideas, They are Not Lies" (Magnapop)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -75858.4        8.9    461.384   -53.8465  (kJ/mol)
+Replica 007 processed successfully.
+Processing replicas/replica_008...
+Calculating RMSD for Replica 008...
+                       :-) GROMACS - gmx rms, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi rms -s em.tpr -f replicas/replica_008/final.xtc -o output/data_files/rmsd_replica_008.xvg -n replicas/replica_008/index.ndx
+
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Select group for least squares fit
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Select group for RMSD calculation
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Reading frame       0 time    0.000   Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+GROMACS reminds you: "This is Tense !" (Star Wars Episode I The Phantom Menace)
+
+Selected 4: 'Backbone'
+Selected 17: 'protein_heavy'
+Extracting Potential Energy for Replica 008...
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_008/remd.edr -o output/data_files/energy_replica_008.xvg
+
+Opened replicas/replica_008/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "I Have a Bad Case Of Purple Diarrhea" (Urban Dance Squad)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -74865.9        3.9    504.725   -22.0126  (kJ/mol)
+Replica 008 processed successfully.
+Processing replicas/replica_009...
+Calculating RMSD for Replica 009...
+                       :-) GROMACS - gmx rms, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi rms -s em.tpr -f replicas/replica_009/final.xtc -o output/data_files/rmsd_replica_009.xvg -n replicas/replica_009/index.ndx
+
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Select group for least squares fit
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Select group for RMSD calculation
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Reading frame       0 time    0.000   Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+GROMACS reminds you: "This Doesn't Suck, It's a Black Hole !" (K.A. Feenstra)
+
+Selected 4: 'Backbone'
+Selected 17: 'protein_heavy'
+Extracting Potential Energy for Replica 009...
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_009/remd.edr -o output/data_files/energy_replica_009.xvg
+
+Opened replicas/replica_009/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "A little less conversation, a little more action, please." (Elvis Presley)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -73856.4        2.1    552.872   -2.27694  (kJ/mol)
+Replica 009 processed successfully.
+Processing replicas/replica_010...
+Calculating RMSD for Replica 010...
+                       :-) GROMACS - gmx rms, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi rms -s em.tpr -f replicas/replica_010/final.xtc -o output/data_files/rmsd_replica_010.xvg -n replicas/replica_010/index.ndx
+
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Select group for least squares fit
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Select group for RMSD calculation
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Reading frame       0 time    0.000   Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+GROMACS reminds you: "Don't pay any attention to what they write about you. Just measure it in inches." (Andy Warhol)
+
+Selected 4: 'Backbone'
+Selected 17: 'protein_heavy'
+Extracting Potential Energy for Replica 010...
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_010/remd.edr -o output/data_files/energy_replica_010.xvg
+
+Opened replicas/replica_010/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "Don't pay any attention to what they write about you. Just measure it in inches." (Andy Warhol)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -72815.1        5.8    609.564    31.6923  (kJ/mol)
+Replica 010 processed successfully.
+Processing replicas/replica_011...
+Calculating RMSD for Replica 011...
+                       :-) GROMACS - gmx rms, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi rms -s em.tpr -f replicas/replica_011/final.xtc -o output/data_files/rmsd_replica_011.xvg -n replicas/replica_011/index.ndx
+
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Select group for least squares fit
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Select group for RMSD calculation
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Reading frame       0 time    0.000   Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+GROMACS reminds you: "Dr Pauling, how do you have so many good ideas? Well David, I have a lot of ideas and throw away the bad ones." (Linus Pauling)
+
+Selected 4: 'Backbone'
+Selected 17: 'protein_heavy'
+Extracting Potential Energy for Replica 011...
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_011/remd.edr -o output/data_files/energy_replica_011.xvg
+
+Opened replicas/replica_011/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "That Was Pretty Cool" (Beavis)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -71744.3        4.7    681.696    4.47837  (kJ/mol)
+Replica 011 processed successfully.
+Processing replicas/replica_012...
+Calculating RMSD for Replica 012...
+                       :-) GROMACS - gmx rms, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi rms -s em.tpr -f replicas/replica_012/final.xtc -o output/data_files/rmsd_replica_012.xvg -n replicas/replica_012/index.ndx
+
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Reading file em.tpr, VERSION 2024.2 (single precision)
+Select group for least squares fit
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Select group for RMSD calculation
+Group     0 (         System) has  5910 elements
+Group     1 (        Protein) has   304 elements
+Group     2 (      Protein-H) has   154 elements
+Group     3 (        C-alpha) has    20 elements
+Group     4 (       Backbone) has    60 elements
+Group     5 (      MainChain) has    81 elements
+Group     6 (   MainChain+Cb) has    98 elements
+Group     7 (    MainChain+H) has    99 elements
+Group     8 (      SideChain) has   205 elements
+Group     9 (    SideChain-H) has    73 elements
+Group    10 (    Prot-Masses) has   304 elements
+Group    11 (    non-Protein) has  5606 elements
+Group    12 (          Water) has  5595 elements
+Group    13 (            SOL) has  5595 elements
+Group    14 (      non-Water) has   315 elements
+Group    15 (            Ion) has    11 elements
+Group    16 ( Water_and_ions) has  5606 elements
+Group    17 (  protein_heavy) has   154 elements
+Select a group: Reading frame       0 time    0.000   Reading frame       1 time   10.000   Reading frame       2 time   20.000   Reading frame       3 time   30.000   Reading frame       4 time   40.000   Reading frame       5 time   50.000   Reading frame       6 time   60.000   Reading frame       7 time   70.000   Reading frame       8 time   80.000   Reading frame       9 time   90.000   Reading frame      10 time  100.000   Reading frame      11 time  110.000   Reading frame      12 time  120.000   Reading frame      13 time  130.000   Reading frame      14 time  140.000   Reading frame      15 time  150.000   Reading frame      16 time  160.000   Reading frame      17 time  170.000   Reading frame      18 time  180.000   Reading frame      19 time  190.000   Reading frame      20 time  200.000   Reading frame      30 time  300.000   Reading frame      40 time  400.000   Reading frame      50 time  500.000   Reading frame      60 time  600.000   Reading frame      70 time  700.000   Reading frame      80 time  800.000   Reading frame      90 time  900.000   Reading frame     100 time 1000.000   Reading frame     110 time 1100.000   Reading frame     120 time 1200.000   Reading frame     130 time 1300.000   Reading frame     140 time 1400.000   Reading frame     150 time 1500.000   Reading frame     160 time 1600.000   Reading frame     170 time 1700.000   Reading frame     180 time 1800.000   Reading frame     190 time 1900.000   Reading frame     200 time 2000.000   Reading frame     300 time 3000.000   Reading frame     400 time 4000.000   Reading frame     500 time 5000.000   Reading frame     600 time 6000.000   Reading frame     700 time 7000.000   Reading frame     800 time 8000.000   Reading frame     900 time 9000.000   Reading frame    1000 time 10000.000   Last frame       1000 time 10000.000   
+
+GROMACS reminds you: "The World is a Friendly Place" (Magnapop)
+
+Selected 4: 'Backbone'
+Selected 17: 'protein_heavy'
+Extracting Potential Energy for Replica 012...
+                      :-) GROMACS - gmx energy, 2024.2 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx_mpi
+Data prefix:  /usr/local/gromacs
+Working dir:  /workspace
+Command line:
+  gmx_mpi energy -f replicas/replica_012/remd.edr -o output/data_files/energy_replica_012.xvg
+
+Opened replicas/replica_012/remd.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Box-X           20  Box-Y         
+ 21  Box-Z           22  Volume          23  Density         24  pV            
+ 25  Enthalpy        26  Vir-XX          27  Vir-XY          28  Vir-XZ        
+ 29  Vir-YX          30  Vir-YY          31  Vir-YZ          32  Vir-ZX        
+ 33  Vir-ZY          34  Vir-ZZ          35  Pres-XX         36  Pres-XY       
+ 37  Pres-XZ         38  Pres-YX         39  Pres-YY         40  Pres-YZ       
+ 41  Pres-ZX         42  Pres-ZY         43  Pres-ZZ         44  #Surf*SurfTen 
+ 45  Box-Vel-XX      46  Box-Vel-YY      47  Box-Vel-ZZ      48  T-System      
+ 49  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time   10.000         Reading energy frame      2 time   20.000         Reading energy frame      3 time   30.000         Reading energy frame      4 time   40.000         Reading energy frame      5 time   50.000         Reading energy frame      6 time   60.000         Reading energy frame      7 time   70.000         Reading energy frame      8 time   80.000         Reading energy frame      9 time   90.000         Reading energy frame     10 time  100.000         Reading energy frame     11 time  110.000         Reading energy frame     12 time  120.000         Reading energy frame     13 time  130.000         Reading energy frame     14 time  140.000         Reading energy frame     15 time  150.000         Reading energy frame     16 time  160.000         Reading energy frame     17 time  170.000         Reading energy frame     18 time  180.000         Reading energy frame     19 time  190.000         Reading energy frame     20 time  200.000         Reading energy frame     30 time  300.000         Reading energy frame     40 time  400.000         Reading energy frame     50 time  500.000         Reading energy frame     60 time  600.000         Reading energy frame     70 time  700.000         Reading energy frame     80 time  800.000         Reading energy frame     90 time  900.000         Reading energy frame    100 time 1000.000         Reading energy frame    110 time 1100.000         Reading energy frame    120 time 1200.000         Reading energy frame    130 time 1300.000         Reading energy frame    140 time 1400.000         Reading energy frame    150 time 1500.000         Reading energy frame    160 time 1600.000         Reading energy frame    170 time 1700.000         Reading energy frame    180 time 1800.000         Reading energy frame    190 time 1900.000         Reading energy frame    200 time 2000.000         Reading energy frame    300 time 3000.000         Reading energy frame    400 time 4000.000         Reading energy frame    500 time 5000.000         Reading energy frame    600 time 6000.000         Reading energy frame    700 time 7000.000         Reading energy frame    800 time 8000.000         Reading energy frame    900 time 9000.000         Reading energy frame   1000 time 10000.000         Last energy frame read 1000 time 10000.000         
+
+GROMACS reminds you: "The World is a Friendly Place" (Magnapop)
+
+
+Statistics over 5000001 steps [ 0.0000 through 10000.0000 ps ], 1 data sets
+All statistics are over 50001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -70629.7        5.1    772.607   -15.3644  (kJ/mol)
+Replica 012 processed successfully.
+RMSD and Potential Energy extraction complete.

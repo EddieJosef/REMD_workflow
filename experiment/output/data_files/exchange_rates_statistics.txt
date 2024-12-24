@@ -1,0 +1,131 @@
+replicas/replica_001/remd.log:Repl  average probabilities:
+replicas/replica_001/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_001/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+replicas/replica_001/remd.log-Repl  number of exchanges:
+replicas/replica_001/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_001/remd.log-Repl       74   86  100   99  111   99  114  136  155  171  239
+replicas/replica_001/remd.log-Repl  average number of exchanges:
+replicas/replica_001/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_001/remd.log-Repl      .06  .07  .08  .08  .09  .08  .09  .11  .12  .14  .19
+replicas/replica_001/remd.log-
+--
+replicas/replica_002/remd.log:Repl  average probabilities:
+replicas/replica_002/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_002/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+replicas/replica_002/remd.log-Repl  number of exchanges:
+replicas/replica_002/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_002/remd.log-Repl       74   86  100   99  111   99  114  136  155  171  239
+replicas/replica_002/remd.log-Repl  average number of exchanges:
+replicas/replica_002/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_002/remd.log-Repl      .06  .07  .08  .08  .09  .08  .09  .11  .12  .14  .19
+replicas/replica_002/remd.log-
+--
+replicas/replica_003/remd.log:Repl  average probabilities:
+replicas/replica_003/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_003/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+replicas/replica_003/remd.log-Repl  number of exchanges:
+replicas/replica_003/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_003/remd.log-Repl       74   86  100   99  111   99  114  136  155  171  239
+replicas/replica_003/remd.log-Repl  average number of exchanges:
+replicas/replica_003/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_003/remd.log-Repl      .06  .07  .08  .08  .09  .08  .09  .11  .12  .14  .19
+replicas/replica_003/remd.log-
+--
+replicas/replica_004/remd.log:Repl  average probabilities:
+replicas/replica_004/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_004/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+replicas/replica_004/remd.log-Repl  number of exchanges:
+replicas/replica_004/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_004/remd.log-Repl       74   86  100   99  111   99  114  136  155  171  239
+replicas/replica_004/remd.log-Repl  average number of exchanges:
+replicas/replica_004/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_004/remd.log-Repl      .06  .07  .08  .08  .09  .08  .09  .11  .12  .14  .19
+replicas/replica_004/remd.log-
+--
+replicas/replica_005/remd.log:Repl  average probabilities:
+replicas/replica_005/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_005/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+replicas/replica_005/remd.log-Repl  number of exchanges:
+replicas/replica_005/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_005/remd.log-Repl       74   86  100   99  111   99  114  136  155  171  239
+replicas/replica_005/remd.log-Repl  average number of exchanges:
+replicas/replica_005/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_005/remd.log-Repl      .06  .07  .08  .08  .09  .08  .09  .11  .12  .14  .19
+replicas/replica_005/remd.log-
+--
+replicas/replica_006/remd.log:Repl  average probabilities:
+replicas/replica_006/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_006/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+replicas/replica_006/remd.log-Repl  number of exchanges:
+replicas/replica_006/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_006/remd.log-Repl       74   86  100   99  111   99  114  136  155  171  239
+replicas/replica_006/remd.log-Repl  average number of exchanges:
+replicas/replica_006/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_006/remd.log-Repl      .06  .07  .08  .08  .09  .08  .09  .11  .12  .14  .19
+replicas/replica_006/remd.log-
+--
+replicas/replica_007/remd.log:Repl  average probabilities:
+replicas/replica_007/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_007/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+replicas/replica_007/remd.log-Repl  number of exchanges:
+replicas/replica_007/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_007/remd.log-Repl       74   86  100   99  111   99  114  136  155  171  239
+replicas/replica_007/remd.log-Repl  average number of exchanges:
+replicas/replica_007/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_007/remd.log-Repl      .06  .07  .08  .08  .09  .08  .09  .11  .12  .14  .19
+replicas/replica_007/remd.log-
+--
+replicas/replica_008/remd.log:Repl  average probabilities:
+replicas/replica_008/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_008/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+replicas/replica_008/remd.log-Repl  number of exchanges:
+replicas/replica_008/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_008/remd.log-Repl       74   86  100   99  111   99  114  136  155  171  239
+replicas/replica_008/remd.log-Repl  average number of exchanges:
+replicas/replica_008/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_008/remd.log-Repl      .06  .07  .08  .08  .09  .08  .09  .11  .12  .14  .19
+replicas/replica_008/remd.log-
+--
+replicas/replica_009/remd.log:Repl  average probabilities:
+replicas/replica_009/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_009/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+replicas/replica_009/remd.log-Repl  number of exchanges:
+replicas/replica_009/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_009/remd.log-Repl       74   86  100   99  111   99  114  136  155  171  239
+replicas/replica_009/remd.log-Repl  average number of exchanges:
+replicas/replica_009/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_009/remd.log-Repl      .06  .07  .08  .08  .09  .08  .09  .11  .12  .14  .19
+replicas/replica_009/remd.log-
+--
+replicas/replica_010/remd.log:Repl  average probabilities:
+replicas/replica_010/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_010/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+replicas/replica_010/remd.log-Repl  number of exchanges:
+replicas/replica_010/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_010/remd.log-Repl       74   86  100   99  111   99  114  136  155  171  239
+replicas/replica_010/remd.log-Repl  average number of exchanges:
+replicas/replica_010/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_010/remd.log-Repl      .06  .07  .08  .08  .09  .08  .09  .11  .12  .14  .19
+replicas/replica_010/remd.log-
+--
+replicas/replica_011/remd.log:Repl  average probabilities:
+replicas/replica_011/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_011/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+replicas/replica_011/remd.log-Repl  number of exchanges:
+replicas/replica_011/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_011/remd.log-Repl       74   86  100   99  111   99  114  136  155  171  239
+replicas/replica_011/remd.log-Repl  average number of exchanges:
+replicas/replica_011/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_011/remd.log-Repl      .06  .07  .08  .08  .09  .08  .09  .11  .12  .14  .19
+replicas/replica_011/remd.log-
+--
+replicas/replica_012/remd.log:Repl  average probabilities:
+replicas/replica_012/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_012/remd.log-Repl      .06  .07  .07  .08  .08  .08  .09  .11  .12  .14  .19
+replicas/replica_012/remd.log-Repl  number of exchanges:
+replicas/replica_012/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_012/remd.log-Repl       74   86  100   99  111   99  114  136  155  171  239
+replicas/replica_012/remd.log-Repl  average number of exchanges:
+replicas/replica_012/remd.log-Repl     0    1    2    3    4    5    6    7    8    9   10   11
+replicas/replica_012/remd.log-Repl      .06  .07  .08  .08  .09  .08  .09  .11  .12  .14  .19
+replicas/replica_012/remd.log-

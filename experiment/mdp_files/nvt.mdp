@@ -1,0 +1,55 @@
+; Run parameters
+integrator              = md
+nsteps                  = 150000          ; 100 ps for equilibration
+dt                      = 0.001          ; 2 fs time step
+
+; Output control
+nstxout-compressed      = 2500           ; Coordinates output every 5 ps
+nstenergy               = 1000           ; Energies output every 2 ps
+nstlog                  = 1000           ; Log file output every 2 ps
+
+; Bond parameters
+continuation            = no
+constraint_algorithm    = lincs
+constraints             = h-bonds        ; Apply constraints to H-bonds
+lincs_iter              = 1
+lincs_order             = 4
+
+; Neighbor searching and cutoffs
+cutoff-scheme           = Verlet
+nstlist                 = 20             ; Neighbor list update every 40 fs
+verlet-buffer-tolerance = 0.005          ; Controls rlist automatically
+rlist                   = 1.0            ; Starting rlist based on Verlet
+
+; Electrostatics
+coulombtype             = PME
+rcoulomb                = 1.2            ; Electrostatic cutoff
+pme_order               = 4              ; Cubic PME interpolation
+fourierspacing          = 0.12           ; PME grid spacing
+
+; van der Waals
+vdw-type                = cut-off
+vdw-modifier            = force-switch
+rvdw-switch             = 1.0
+rvdw                    = 1.2            ; VdW cutoff distance
+
+; Temperature coupling
+tcoupl                  = V-rescale
+tc-grps                 = Protein Water_and_ions
+tau-t                   = 0.5 0.5       ; Fast coupling for equilibration
+ref-t                   = 300 300        ; Target temperature
+
+; Pressure coupling
+pcoupl                  = no             ; No pressure coupling in NVT
+
+; Center of mass motion
+comm-mode               = Linear
+comm-grps               = System
+
+; Velocity generation
+gen_vel                 = yes
+gen_temp                = 300            ; Generate velocities at 300 K
+gen_seed                = 1736343463     ; Fixed seed for reproducibility
+
+; Position restraints
+define                  = -DPOSRES       ; Enable position restraints
