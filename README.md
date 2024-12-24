@@ -100,7 +100,7 @@ docker run -v /path/to/input:/input -v /path/to/output:/output edjosef96/remd \
 - **`./gromacs.tar.gz`**: Precompiled GROMACS binaries with MPI and CUDA support.
 - **`./install_gromacs_binaries.sh`**: Bash script for installing dependencies, extracting GROMACS binaries, and configuring the environment.
 - **`README.md`**: Documentation file providing an overview and usage instructions for the workflow.
-- **`Theoretical_Documentation.pdf`**: Detailed theoretical documentation explaining the methodology, implementation, and scientific principles behind the workflow.
+- **`Theoretical_Documentation.md`**: Detailed theoretical documentation explaining the methodology, implementation, and scientific principles behind the workflow.
 
 ---
 
