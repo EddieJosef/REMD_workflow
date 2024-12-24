@@ -1,4 +1,4 @@
-title                   = Protein-ligand complex REMD simulation
+title                   = REMD simulation
 
 ; Run parameters
 integrator              = md                    ; Leap-frog integrator
