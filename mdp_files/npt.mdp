@@ -1,4 +1,4 @@
-title                   = Protein-ligand complex NPT equilibration
+title                   = NPT equilibration
 define                  = -DPOSRES  ; Position restrain the protein and ligand
 
 ; Run parameters
