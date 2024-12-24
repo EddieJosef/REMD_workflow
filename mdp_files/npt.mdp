@@ -3,7 +3,7 @@ define                  = -DPOSRES  ; Position restrain the protein and ligand
 
 ; Run parameters
 integrator              = md        ; Leap-frog integrator
-nsteps                  = 100000     ; 100 ps
+nsteps                  = 150000     ; 100 ps
 dt                      = 0.001     ; 2 fs
 
 ; Output control
@@ -42,7 +42,7 @@ ref_t                   = 300 300   ; Reference temperature (K)
 ; Pressure coupling
 pcoupl                  = Berendsen ; Accurate pressure coupling
 pcoupltype              = isotropic ; Uniform scaling of box vectors
-tau_p                   = 5.0       ; Time constant for pressure coupling (ps)
+tau_p                   = 2.0       ; Time constant for pressure coupling (ps)
 ref_p                   = 1.0       ; Reference pressure (bar)
 compressibility         = 4.5e-5    ; Isothermal compressibility for water (bar^-1)
 refcoord_scaling        = com       ; Scaling coordinates with center-of-mass motion
