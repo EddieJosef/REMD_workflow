@@ -20,7 +20,7 @@ This repository contains the results of **two REMD runs**:
 
 The REMD workflow is prepackaged in a Docker image for straightforward deployment:
 
-- **Docker Image**: `docker pull edjosef96/remd:v1.0.1`
+- **Docker Image**: `docker pull edjosef96/remd:v1.0.2`
 
 ---
 
