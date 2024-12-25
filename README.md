@@ -31,7 +31,7 @@ The REMD workflow is prepackaged in a Docker image for straightforward deploymen
 To execute the REMD workflow, use the following command:
 
 ```bash
-docker run -v /path/to/input:/workspace/input -v /path/to/output:/workspace/output edjosef96/remd \
+docker run -v /path/to/input:/workspace/input -v /path/to/output:/workspace/output edjosef96/remd:v1.0.2 \
     --configfile /input/config.yaml --cores all
 ```
 
