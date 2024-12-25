@@ -2,6 +2,11 @@
 
 This workflow automates the **Replica Exchange Molecular Dynamics (REMD)** simulation process, a robust technique that enhances conformational sampling in molecular dynamics simulations, particularly for systems with complex energy landscapes.
 
+This repository contains the results of **two REMD runs**:
+
+- **First Run**: The results are located in the `output` directory. This run provided baseline performance metrics and identified areas for improvement.
+- **Second Run**: The results are located in the `Experiment` directory. This run performed significantly better after parameter optimizations. With a bit more fine-tuning, the simulation results are expected to improve even further, showcasing the potential for robust sampling and convergence.
+
 ### **Overview**
 
 - The project aims to streamline and standardize the REMD simulation workflow.
