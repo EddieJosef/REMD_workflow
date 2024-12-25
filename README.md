@@ -32,7 +32,7 @@ To execute the REMD workflow, use the following command:
 
 ```bash
 docker run -v /path/to/input:/workspace/input -v /path/to/output:/workspace/output edjosef96/remd \
-    --configfile /input/config.yaml
+    --configfile /input/config.yaml --cores all
 ```
 
 You can also mount additional directories as needed:
