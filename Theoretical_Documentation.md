@@ -120,7 +120,9 @@ This prevents bottlenecks where some pairs have poor exchange rates, ensuring ef
 ## **Summary**
 
 The temperature ladder selection approach dynamically computes the number of replicas using:
-$$ \delta = \sqrt{\frac{2}{P_{\text{target}} \cdot N_{\text{atoms}}}}$$
+$$ 
+\delta = \sqrt{\frac{2}{P_{\text{target}} \cdot N_{\text{atoms}}}}
+$$
 and determines the temperatures via exponential spacing:
 
 $$
